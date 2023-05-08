@@ -1,0 +1,43 @@
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--preto);
+    flex-wrap: wrap;
+    background: linear-gradient(to bottom, var(--bg), var(--preto) 30%);
+    border-radius: 20px;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+    
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3em;
+}
+
+.about .row .content p {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.6em;
+    color: #ccc;
+    line-height: 1.4;
+    padding: .5em 0;
+}
+
+.about .row .content .btn {
+    margin-top: 1em;
+}
+
+
+@media screen and (max-width: 991px) {
+    
+}

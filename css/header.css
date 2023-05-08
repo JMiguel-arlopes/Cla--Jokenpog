@@ -1,0 +1,143 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--bg);
+    border-bottom: var(--border);
+    padding: 1.5rem 7%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.cabecalho .logo img {
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.cabecalho .main__title {
+    display: none;
+    font-size: 4.2rem;
+}
+
+.cabecalho .navbar a {
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 1.6em;
+    text-transform: capitalize;
+}
+
+.cabecalho .navbar a:hover {
+    color: var(--vermelho);
+    border-bottom: .1rem solid;
+    padding-bottom: .5rem;
+}
+
+.cabecalho .icons {
+    display: flex;
+    align-items: center;
+    padding: .3rem;
+}
+
+
+.cabecalho .icons span {
+    color: #fff;
+    margin: 0 1rem;
+}
+
+.cabecalho .icons .menu {
+    display: none;
+    padding: .3rem;
+    font-size: 5rem;
+    border-radius: 50%;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.cabecalho .icons .cabecalho__titulo {
+    display: block;
+    font-size: 4.5rem;
+}
+
+.cabecalho .icons .menu:hover {
+    color: var(--vermelho);
+    border: .25rem solid var(--vermelho);
+}
+
+@keyframes navbar {
+    0% {
+        transform: translateX(100%);
+    }
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 991px) {
+
+    /* _ */
+
+    .cabecalho .icons .menu {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%; right: 0;
+        background-color: white;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .cabecalho .navbar.active {
+        display: block;
+        animation: navbar .15s linear;
+    }
+
+    .cabecalho .navbar a {
+        color: var(--preto);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2em;
+    }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+    
+    
+    .cabecalho .main__title {
+        display: block;
+    }
+
+    .cabecalho .icons .menu {
+        margin: 0;
+    }
+
+    .cabecalho .icons .cabecalho__titulo {
+        display: none;
+    }
+
+    html {
+        font-size: 50%;
+    }
+
+
+
+}

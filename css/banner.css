@@ -1,0 +1,140 @@
+.home {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--preto);
+    box-shadow: inset 0 0 100px black;
+}
+
+.home .content {
+    max-width: 60rem;
+    position: relative;
+}
+
+.home .content h2 {
+    font-size: 6em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.home .content .plataformas {
+    font-size: 2.5em;
+    font-weight: 500;
+    color: red;
+    text-transform: uppercase;
+}
+
+.blink {
+    color: darkred;
+    animation: blink .5s linear infinite;
+    font-size: 3em;
+}
+
+.home .content p {
+    font-size: 2em;
+    font-weight: lighter;
+    line-height: 1.8;
+    margin: 1em 0 calc(1em - 12px) 0;
+    font-family: var(--fonte-secundaria);
+}
+
+.banner__buttons {
+    display: flex;
+    gap: 2%;
+}
+
+/* .home .content .lista-plataformas-icons {
+    display: flex;
+    
+}
+
+.lista-plataformas-icons .icon-item {
+    margin: 0 1rem;
+}
+
+.lista-plataformas-icons .icon-item .icon {
+    height: 3rem;
+} */
+
+
+.home .logo-banner {
+    animation: flutuar 4s alternate ease-in-out infinite;
+}
+
+
+
+@media screen and (max-width: 991px){
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        min-height: 70vh;
+        text-align: center;
+        
+    }
+
+    .home .content h2 {
+        font-size: 3.7em;
+        color: rgb(255, 203, 70);
+    }
+
+    .home .content .plataformas {
+        font-size: 2em;
+        font-weight: 500;
+        color: red;
+        text-transform: uppercase;
+    }
+
+    .home .content p {
+        font-size: 1.4em;
+        line-height: 1.3;
+        margin-bottom: 2.3em;
+    }
+
+    .banner__buttons {
+        justify-content: center;
+        gap: 5%;
+    }
+
+    .home .content .lista-plataformas-icons {
+        justify-content: center;
+        gap: 2%;
+    }
+
+    .logo-banner {
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 451px) {
+    .banner__buttons {
+        gap: 5%;
+    }
+
+    .banner__buttons .btn {
+        font-size: 2.1em;
+    }
+}
+
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
