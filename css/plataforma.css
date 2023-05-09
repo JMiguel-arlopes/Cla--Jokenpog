@@ -1,0 +1,99 @@
+.plataformas {
+    display: grid;
+    grid-template-columns: 45% 35% 45%;
+    height: 90vh;
+    justify-content: center;
+    /* display: flex; */
+    padding: 0;
+}
+
+.plataformas .container-plataforma{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+    /* transform: skew(15deg, 5deg); */
+    /* box-sizing: border-box; */
+    /* padding: 1rem; */
+    position: relative;
+}
+
+
+
+.plataformas .container-plataforma .s {
+    /* padding: 1rem; */
+    max-width: 100%;
+    margin: 2rem;
+}
+
+.plataformas .container-plataforma .k {
+    /* transform: skewX(-15deg); */
+    /* font-size: 2em; */
+    font-size: 1em;
+}
+
+/* mlbb */
+
+.plataformas .container-plataforma.mlbb {
+    background-color: var(--cor-de-fundo-secundaria);
+    transform: skewX(-15deg) translateX(5%);
+    transition: all 1s;
+    z-index: 100;
+    border-right: 5px solid black;
+}
+
+.plataformas .container-plataforma.mlbb.activeMlbb {
+    transform: skewX(-15deg) translateX(5%) scaleX(150%);
+}
+
+.plataformas .container-plataforma.mlbb.activeCod {
+    transform: skewX(-15deg)  translateX(-5%);
+}
+
+.plataformas .container-plataforma.mlbb.activeEco {
+    transform: skewX(-15deg) translateX(-15%);
+}
+
+
+/* call of duty */
+
+.plataformas .container-plataforma.cod {
+    background-color: darkgreen;
+    transform: scaleX(1.2);
+    transition: all 1s;
+}
+
+.plataformas .container-plataforma.cod.activeMlbb {
+    transform: scaleX(1.2) translateX(25%);
+}
+
+.plataformas .container-plataforma.cod.activeCod {
+    transform: scaleX(1.5);
+}
+
+.plataformas .container-plataforma.cod.activeEco {
+    transform: scaleX(1.2) translateX(-25%);
+}
+
+
+/* economia */
+
+.plataformas .container-plataforma.eco {
+    background-color: goldenrod;
+    transform: skewX(15deg) translateX(-5%);
+    border-left: 5px solid black;
+    transition: all 1s;
+}
+
+.plataformas .container-plataforma.eco.activeMlbb {
+    transform: skewX(15deg) translateX(15%);
+}
+
+.plataformas .container-plataforma.eco.activeCod {
+    transform: skewX(15deg) translateX(5%);
+}
+
+.plataformas .container-plataforma.eco.activeEco {
+    transform: skewX(15deg) translateX(-5%) scaleX(150%);
+}
