@@ -2,6 +2,7 @@
 @import url(./css/header.css);
 @import url(./css/banner.css);
 @import url(./css/about.css);
+@import url(./css/plataforma.css);
 
 /* black ops */
 /* aldrich */
@@ -90,20 +91,21 @@ section {
 
 
 .container__card {
-    position: relative;
-    padding: 1rem 0;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    margin: 5rem;
+
+    /* z-index: 10; */
+    max-width: 45rem;
+
 }
 
 .card {
-    width: 100%;
-    height: 40%;
-    margin: 2rem 3rem;
-    padding: 0.5rem;
+    /* width: 100%; */
+    /* height: 40%; */
+    /* margin: 2rem 3rem; */
+    padding: 2rem;
     text-align: center;
     background-color: black;
     border-radius: 5%;
@@ -129,7 +131,7 @@ section {
 /* ml */
 
 .container__ml {
-    background: linear-gradient(var(--cor-de-fundo-secundaria), var(--cor-de-fundo) 70%);
+    /* background: linear-gradient(var(--cor-de-fundo-secundaria), var(--cor-de-fundo) 70%); */
 }
 
 
@@ -145,7 +147,7 @@ section {
 }
 
 .container__financas::before {
-    content: '';
+    /* content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -156,17 +158,17 @@ section {
     background-repeat: no-repeat;
     background-position: 100% 50%;
 
-    animation: animar 10s linear infinite;
+    animation: animar 10s linear infinite; */
 }
 
 /* cod */
 
 .container__cod {
-    position: relative;
+    /* position: relative; */
 }
 
 .container__cod::before {
-    content: '';
+    /* content: '';
     top: 0;
     left: 0;
     bottom: 0;
@@ -178,7 +180,7 @@ section {
     background-position: 0% 50%;
     opacity: 0.6;
 
-    animation: nevoa 10s linear infinite;
+    animation: nevoa 10s linear infinite; */
 }
 
 .balas {
@@ -191,7 +193,7 @@ section {
 }
 
 .container__card:last-child .titulo__secundario {
-    color: gold;
+    /* color: gold; */
 }
 
 
