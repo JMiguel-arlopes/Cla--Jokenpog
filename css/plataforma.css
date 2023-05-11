@@ -1,99 +1,95 @@
 .plataformas {
-    display: grid;
-    grid-template-columns: 45% 35% 45%;
-    height: 90vh;
-    justify-content: center;
-    /* display: flex; */
-    padding: 0;
+
 }
 
 .plataformas .container-plataforma{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* overflow: hidden; */
-    /* transform: skew(15deg, 5deg); */
-    /* box-sizing: border-box; */
-    /* padding: 1rem; */
     position: relative;
+    flex-direction: column;
+
+    border: 3px solid black;
+    padding: 2rem;
+    margin: 1rem;
 }
 
-
-
-.plataformas .container-plataforma .s {
-    /* padding: 1rem; */
-    max-width: 100%;
-    margin: 2rem;
-}
-
-.plataformas .container-plataforma .k {
-    /* transform: skewX(-15deg); */
-    /* font-size: 2em; */
-    font-size: 1em;
-}
-
-/* mlbb */
-
-.plataformas .container-plataforma.mlbb {
+.plataformas .mlbb {
     background-color: var(--cor-de-fundo-secundaria);
-    transform: skewX(-15deg) translateX(5%);
-    transition: all 1s;
-    z-index: 100;
-    border-right: 5px solid black;
 }
 
-.plataformas .container-plataforma.mlbb.activeMlbb {
-    transform: skewX(-15deg) translateX(5%) scaleX(150%);
+.plataformas .cod {
+    background-color: black;
+    background-image: url(../img/warzone-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+
+    position: relative;
+    z-index: 1000;
 }
 
-.plataformas .container-plataforma.mlbb.activeCod {
-    transform: skewX(-15deg)  translateX(-5%);
-}
-
-.plataformas .container-plataforma.mlbb.activeEco {
-    transform: skewX(-15deg) translateX(-15%);
-}
-
-
-/* call of duty */
-
-.plataformas .container-plataforma.cod {
-    background-color: darkgreen;
-    transform: scaleX(1.2);
-    transition: all 1s;
-}
-
-.plataformas .container-plataforma.cod.activeMlbb {
-    transform: scaleX(1.2) translateX(25%);
-}
-
-.plataformas .container-plataforma.cod.activeCod {
-    transform: scaleX(1.5);
-}
-
-.plataformas .container-plataforma.cod.activeEco {
-    transform: scaleX(1.2) translateX(-25%);
+.plataformas .cod::before {
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.741) 40%, transparent 40%, transparent 70%, rgba(0, 0, 0, 0.714) 70%);
+    background-image: url(../img/nevoa-cut.png);
+    /* background-size: 0% 100%;     */
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
 }
 
 
-/* economia */
+.plataformas .cod::after {
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.741) 40%, transparent 40%, transparent 70%, rgba(0, 0, 0, 0.714) 70%);
+}
 
-.plataformas .container-plataforma.eco {
+.plataformas .eco {
     background-color: goldenrod;
-    transform: skewX(15deg) translateX(-5%);
-    border-left: 5px solid black;
-    transition: all 1s;
 }
 
-.plataformas .container-plataforma.eco.activeMlbb {
-    transform: skewX(15deg) translateX(15%);
+
+
+.plataformas .container-plataforma .plataformas__image {
+    width: 20%;
+    max-height: 100%;
+    position: relative;
+    display: inline;
+    z-index: 1000;
 }
 
-.plataformas .container-plataforma.eco.activeCod {
-    transform: skewX(15deg) translateX(5%);
+.plataformas .container-plataforma .plataformas__image.faisca {
+    width: 80%;
+    max-height: 100%;
+    position: absolute;
+    bottom: 0rem;
 }
 
-.plataformas .container-plataforma.eco.activeEco {
-    transform: skewX(15deg) translateX(-5%) scaleX(150%);
+
+.plataformas .container-plataforma .plataformas__text {
+    font-size: 4.5em;
+    padding: .5em 0;
+    display: block;
+    z-index: 1000;
+}
+
+.plataformas .container-plataforma .plataformas__text.active {
+    text-transform: uppercase;
+    font-size: 14em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    letter-spacing: 0.15em;
+
+    
 }
