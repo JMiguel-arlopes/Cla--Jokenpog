@@ -82,32 +82,6 @@ section {
 }
 
 
-
-.container__card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5rem;
-
-    max-width: 45rem;
-
-}
-
-.card {
-    padding: 2rem;
-    text-align: center;
-    background-color: black;
-    border-radius: 5%;
-    border: 3px #111 solid;
-    box-shadow: 0 0 20px red;
-    position: relative;
-}
-
-.img__card {
-    max-width: 100%;
-    border-radius: 5%;
-}
-
 .titulo__secundario {
     font-size: 1em;
     color: white;
@@ -115,76 +89,6 @@ section {
     letter-spacing: 0.1em;
     color: rgb(189, 0, 0);
 }
-
-
-/* ml */
-
-.container__ml {
-    /* background: linear-gradient(var(--cor-de-fundo-secundaria), var(--cor-de-fundo) 70%); */
-}
-
-
-/* finanças */
-
-.container__financas {
-    /* background-image: url(img/grafico2.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top;
-
-    position: relative; */
-}
-
-.container__financas::before {
-    /* content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-image: url(img/cifrao3.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-
-    animation: animar 10s linear infinite; */
-}
-
-/* cod */
-
-.container__cod {
-    /* position: relative; */
-}
-
-.container__cod::before {
-    /* content: '';
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    background-image: url(img/nevoa-cut.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0% 50%;
-    opacity: 0.6;
-
-    animation: nevoa 10s linear infinite; */
-}
-
-.balas {
-    position: absolute;
-    display: inline;
-    bottom: 0%;
-    left: 0;
-    width: 100%;
-    height: 30%;
-}
-
-.container__card:last-child .titulo__secundario {
-    /* color: gold; */
-}
-
 
 
 @keyframes animar {
