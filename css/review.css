@@ -5,9 +5,13 @@
 }
 
 .container-box .box {
-    padding: 2rem;
+    padding: 3rem 2.2rem 1.5rem 2.2rem;
     border: var(--border);
     text-align: center;
+}
+
+.container-box .box > img {
+    width: 6em;
 }
 
 .container-box .box p{
@@ -20,9 +24,29 @@
 
 
 .container-box .box h3{
+    font-family: var(--fonte-secundaria);
     font-size: 2em;
     padding: 2rem 0 1rem 0;
     color: red;
+    line-height: 1em;
+}
+
+.container-box .box h3 span{
+    font-family: var(--fonte-secundaria);
+    font-size: 0.5em;
+    color: #222;
+    line-height: 1.5em;
+    transform: .5s;
+    user-select: none;
+}
+
+.container-box .box h3 span:hover{
+    font-size: 0.51em;
+    color: #777;
+}
+
+.container-box .box h3 span:hover b{
+    color: #9e4242;
 }
 
 .perfil {
@@ -59,7 +83,7 @@
     position: absolute;
 
     inset: 6%;
-    background-color: #111;
+    background-color: #010101;
     z-index: 10;
     border-radius: 50%;
     overflow: hidden;
@@ -68,6 +92,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    user-select: none;
+    cursor: pointer;
+    padding: 0 1em;
 }
 
 .user{
@@ -80,10 +107,15 @@
     object-fit: cover;
     transition: .5s;
     pointer-events: none;
-
 }
 
-.perfil:hover .content-review img {
+.miniatura {
+    height: 3.5em;
+    pointer-events: none;
+}
+
+
+.perfil .content-review .user.active {
     opacity: 0;
 }
 
@@ -96,11 +128,13 @@
 }
 
 .content-review h2 {
+    font-family: var(--fonte-secundaria);
     font-size: 1.3em;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 1.2em;
     color: #fff;
-    /* letter-spacing: 0.085em; */
+    letter-spacing: 0.085em;
     text-transform: uppercase;
     margin: 1em 0;
 }
