@@ -97,7 +97,6 @@
         rgba(0, 0, 216, 0.44)),
         url(../img/kagura.jpg) no-repeat;
     background-position: 25% 0%;
-    /* background-position: 45% 0%; */
     background-size: cover;
     transition: all .4s;
     
@@ -224,7 +223,6 @@
 }
 
 
-
 @media screen and (max-width: 451px) {
 
     .plataformas .container {
@@ -235,6 +233,10 @@
     .plataformas .container .box-3 {
         padding: 6rem 1rem;
     }
+    .plataformas .container .box-3 {
+        background-position: 45% 0%;
+    }
+    
     
     .plataformas .container .box.active {
         padding: 6rem 2rem;
