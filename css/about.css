@@ -22,12 +22,13 @@
 }
 
 .about .row .content h3 {
-    font-size: 3em;
+    color: rgb(255, 203, 70);
+    font-size: 4em;
 }
 
 .about .row .content p {
     font-family: var(--fonte-secundaria);
-    font-size: 1.6em;
+    font-size: 1.8em;
     color: #ccc;
     line-height: 1.4;
     padding: .5em 0;
