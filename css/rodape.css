@@ -1,0 +1,83 @@
+.rodape {
+    background-color: var(--preto);
+    background-image: url(../img/bg.jpg);
+    border-top: var(--border);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+}
+
+.rodape .share {
+    padding: 1em 0;
+}
+
+.rodape .share a{
+    height: 5rem;
+    width: 5rem;
+    font-size: 2rem;
+    line-height: 5rem;
+    vertical-align: bottom;
+    border: var(--border);
+    border-radius: 50%;
+    margin: .3rem;
+    color: rgb(195, 0, 0);
+    transition: all .2s;
+}
+
+.rodape .share a:first-child{
+    color: rgb(81, 81, 188);
+}
+
+.rodape .share a:hover{
+    background-color: whitesmoke;
+}
+
+
+.rodape .links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+    
+}
+
+.rodape .links a{
+    font-size: 2em;
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    transition: all .2s;
+}
+
+.rodape .links a:hover{
+    background-color: #9c0d0d;
+}
+
+.rodape .credits {
+    font-size: 1.2em;
+    color: #fff;
+    padding: .5em;
+    font-weight:lighter;
+}
+
+.rodape .credits h3 {
+    color: #333;
+    padding: .5em;
+}
+
+.rodape .credits h3:hover {
+    color: #999;
+}
+
+.rodape .credits h3:hover span {
+    color: #9e4242;
+}
+
+.rodape .credits h2 {
+    /* border-top: solid 1px rgb(0, 0, 0); */
+    font-size: 1.6em;
+    color: #fff;
+    padding: .3em 0 1.5rem 0;
+    font-weight: 600;
+    letter-spacing: .15rem;
+}
