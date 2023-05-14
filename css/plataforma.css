@@ -35,6 +35,7 @@
     flex-direction: row;
     padding: 5rem;
     z-index: 0;
+    cursor: pointer;
 }
 
 
@@ -54,6 +55,7 @@
 
 .plataformas .container .box.active {
     box-shadow: inset 0 0 65px rgba(0, 128, 0, 0.8);
+    cursor: initial;
 }
 
 /* --Final primeira caixa-- */
@@ -76,6 +78,7 @@
     align-items: center;
     box-shadow: inset 0 0 100px red;
     filter: saturate(1.5);
+    cursor: initial;
 }
 
 /* Final segundo caixa */
@@ -102,6 +105,7 @@
 
 .plataformas .container .box-3.active {
     box-shadow: inset 0 0 20px blueviolet;
+    cursor: initial;
 }
 
 /* Final terceira caixa */
@@ -160,8 +164,6 @@
 .plataformas .container .box-3 .content h1 span {
     font-size: 0.7em;
 }
-
-
 
 .hide {
     display: none;
