@@ -6,10 +6,8 @@
 }
 
 .plataformas .container {
-    /* height: 40vh; */
     height: 80vh;
     width: 85vw;
-    /* width: 98vw; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -34,14 +32,10 @@
     text-align: center;
 
     display: flex;
-    justify-content: start;
     flex-direction: row;
     padding: 5rem;
     z-index: 0;
 }
-/* .plataformas .container .box-2.z-index {
-    z-index: 100000000;
-} */
 
 
 /* --primeira caixa-- */
@@ -56,24 +50,19 @@
     background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(../img/dinheiro5por4.jpeg) no-repeat;
     background-size: cover;
     transition: all .4s;
-    filter: blur(10px);
 }
 
 .plataformas .container .box.active {
-    
-    box-shadow: inset 0 0 100px green;
-    filter: blur(0);
+    box-shadow: inset 0 0 65px rgba(0, 128, 0, 0.8);
 }
-
-
-
 
 /* --Final primeira caixa-- */
 
+/* inicio segundo caixa */
 .plataformas .container .box-2 {
     left: 7.5%;
     width: 85%;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
 
@@ -84,10 +73,14 @@
 }
 
 .plataformas .container .box-2.active {
+    align-items: center;
     box-shadow: inset 0 0 100px red;
-    filter:saturate(1.5);
+    filter: saturate(1.5);
 }
 
+/* Final segundo caixa */
+
+/* inicio tereceira caixa */
 .plataformas .container .box-3 {
     width: 50%;
     left: 50%;
@@ -97,30 +90,21 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 85% 100%);
 
     background:
-         linear-gradient(rgba(0, 0, 203, 0.445),
-        rgba(0, 0, 216, 0.434)),
+         linear-gradient(rgba(0, 0, 203, 0.44),
+        rgba(0, 0, 216, 0.44)),
         url(../img/kagura.jpg) no-repeat;
     background-position: 25% 0%;
     /* background-position: 45% 0%; */
     background-size: cover;
     transition: all .4s;
     
-
-    /* box-shadow: inset 0 0 100px blue; */
 }
 
 .plataformas .container .box-3.active {
-    /* background:
-    linear-gradient(rgba(0, 0, 203, 0.35),
-        rgba(0, 0, 216, 0.35)),
-        url(../img/kagura.jpg) no-repeat;
-    background-position: 25% 0%;
-    background-size: cover; */
-
-    box-shadow: inset 0 0 30px darkblue;
-
-    /* filter: grayscale(1); */
+    box-shadow: inset 0 0 20px blueviolet;
 }
+
+/* Final terceira caixa */
 
 
 .plataformas .container .box .content h1,
@@ -136,10 +120,39 @@
 .plataformas .container .box-2 .content a,
 .plataformas .container .box-3 .content a {
     color: red;
-    font-size: 4em;
+    text-shadow: -0.5vw .5vh black;
+    font-size: 6em;
     margin: 0.5rem;
     text-align: center;
+    text-transform: uppercase;
+    transition: .45s;
+    background-color: rgba(245, 222, 179, 0.103);
+    border-radius: 10px;
+    padding: .1em .3em;
+}
 
+.plataformas .container .box .content a{
+    color: rgb(0, 178, 0);
+    background-color: rgba(43, 255, 0, 0.101);
+
+    /* background: linear-gradient(rgb(0, 255, 0), rgb(0, 80, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-color: rgba(35, 157, 10, 0.629);
+    text-shadow: none; */
+}
+
+.plataformas .container .box-3 .content a{
+    color: rgb(255, 0, 43);
+    text-shadow: -0.5vw .3vh black;
+}
+
+.plataformas .container .box .content a:hover,
+.plataformas .container .box-2 .content a:hover,
+.plataformas .container .box-3 .content a:hover {
+    letter-spacing: .05em;
+    background-color: rgba(245, 222, 179, 0.178);
 }
 
 .plataformas .container .box .content h1 span,
@@ -150,8 +163,83 @@
 
 
 
+.hide {
+    display: none;
+}
+
+.plataformas .container .box-2.disabled {
+    filter: blur(2px) grayscale(.8);
+    justify-content: center;
+}
+
+.plataformas .container .box-3.disabled {
+    filter: blur(2px) grayscale(.8);
+}
+
+.plataformas .container .box.disabled {
+    filter: blur(2px) grayscale(.8);
+}
+
+
+@media screen and (max-width: 991px) {
+    .plataformas .container {
+        height: 50vh;
+        width: 98vw;
+    }
+
+    .plataformas .container .box,
+    .plataformas .container .box-3 {
+        align-items: flex-start;
+        padding: 6rem 3rem;
+    }
+
+    .plataformas .container .box .content h1,
+    .plataformas .container .box-2 .content h1,
+    .plataformas .container .box-3 .content h1 {
+        font-size: clamp(1em, 4vw, 3em);
+    }
+
+    .plataformas .container .box .content a,
+    .plataformas .container .box-2 .content a,
+    .plataformas .container .box-3 .content a {
+        font-size: clamp(0.1em, 6vw, 4em);
+        
+    }
+
+    .plataformas .container .box.active {
+        padding: 6rem 2rem;
+        box-shadow: inset 0 0 45px rgba(0, 128, 0, 0.944);
+    }
+
+    .plataformas .container .box-3.active {
+        padding: 6rem 2rem;
+    }
+
+    .plataformas .container .box-2.active {
+        box-shadow: inset 0 0 45px red;
+    }
+
+}
 
 
 
+@media screen and (max-width: 451px) {
 
+    .plataformas .container {
+        height: 40vh;
+    }
 
+    .plataformas .container .box,
+    .plataformas .container .box-3 {
+        padding: 6rem 1rem;
+    }
+    
+    .plataformas .container .box.active {
+        padding: 6rem 2rem;
+        box-shadow: inset 0 0 35px rgba(0, 128, 0, 0.944);
+    }
+    .plataformas .container .box-2.active {
+        box-shadow: inset 0 0 40px red;
+    }
+
+}
