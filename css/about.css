@@ -24,6 +24,7 @@
 .about .row .content h3 {
     color: rgb(255, 203, 70);
     font-size: 4em;
+    text-align: center;
 }
 
 .about .row .content p {
