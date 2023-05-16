@@ -20,75 +20,70 @@ const caixas = document.querySelectorAll('[data-caixa]');
 const titulo = document.querySelectorAll('.titulo-plataforma');
 const link = document.querySelectorAll('.link-plataforma');
 
-
-
-
 caixas.forEach(caixa => {
+    
+    const nnsei = caixa.dataset.caixa;
+    // console.log(nnsei)
+
+
     caixa.addEventListener('click', (evento) => {
-        const data = evento.target.dataset.caixa
-        console.log(data)
+        const dataGame = evento.target.dataset.caixa;
+        const game = evento.target;
+        // console.log(nnsei)
+        
 
-        if (data === "mlbb") {
-
-            painelMLBB.classList.remove('disabled');
-            painelMLBB.classList.add('active');
-
-            painelInvestimentos.classList.remove('active');
-            painelCOD.classList.remove('active');
-
+        if (dataGame === nnsei) {
+            game.classList.replace('disabled', 'active');
+                
+        } else {
             painelInvestimentos.classList.add('disabled');
             painelCOD.classList.add('disabled');
-        }
+            // painelInvestimentos.classList.replace('active', 'disabled');
+            // painelCOD.classList.replace('active', 'disabled');
+        } 
 
-        if (data === "eco") {
-            painelInvestimentos.classList.remove('disabled');
-            painelInvestimentos.classList.add('active');
+        // if (dataGame === "eco") {
+        //     painelInvestimentos.classList.remove('disabled');
+        //     painelInvestimentos.classList.add('active');
 
-            painelCOD.classList.remove('active');
-            painelMLBB.classList.remove('active');
+        //     painelCOD.classList.remove('active');
+        //     painelMLBB.classList.remove('active');
 
-            painelCOD.classList.add('disabled');
-            painelMLBB.classList.add('disabled');
-        }
+        //     painelCOD.classList.add('disabled');
+        //     painelMLBB.classList.add('disabled');
+        // }
 
-        if (data === "cod") {
-            painelCOD.classList.remove('disabled');
-            painelCOD.classList.add('active');
+        // if (dataGame === "cod") {
+        //     painelCOD.classList.remove('disabled');
+        //     painelCOD.classList.add('active');
 
-            painelInvestimentos.classList.remove('active');
-            painelMLBB.classList.remove('active');
+        //     painelInvestimentos.classList.remove('active');
+        //     painelMLBB.classList.remove('active');
 
-            painelInvestimentos.classList.add('disabled');
-            painelMLBB.classList.add('disabled');
+        //     painelInvestimentos.classList.add('disabled');
+        //     painelMLBB.classList.add('disabled')
+        
+        // }
 
-            
-        }
+        link.forEach((linka) => {
+            const l = linka.dataset.link;
 
-        const linkEsp = evento.target.querySelector('[data-link]')
-
-        console.log(linkEsp);
-
-        linkEsp.classList.remove('hide');
-
-        link.forEach((linka, i) => {
-            if(i === 0) {
+            if(l == dataGame) {
                 linka.classList.remove('hide');
-    
-                titulo.forEach((title, j) => {
-                    if(j === i) {
-                        title.classList.add('hide');
-                    }
-                }) 
-            } else {
-                if (!linka.classList.contains('hide'))
-                    linka.classList.add('hide');
-    
-                    titulo.forEach((title, j) => {
-                        if(j === i) {
-                            title.classList.remove('hide');
-                        }
-                    }) 
+                evento.target.querySelector('[data-titulo]').classList.add('hide');
+            } 
+
+            if(l != dataGame) {
+                linka.classList.add('hide');
+
+                titulo.forEach((title) => {
+                    const t = title.dataset.titulo;
+                    if(t != dataGame) {
+                        title.classList.remove('hide')
+                    }  
+                })
             }
+
         })
     })
 })
@@ -97,111 +92,6 @@ caixas.forEach(caixa => {
 
 
 
-
-
-
-// painelInvestimentos.addEventListener('click', () => {
-//     painelInvestimentos.classList.remove('disabled');
-//     painelInvestimentos.classList.add('active');
-
-//     painelCOD.classList.remove('active');
-//     painelMLBB.classList.remove('active');
-
-//     painelCOD.classList.add('disabled');
-//     painelMLBB.classList.add('disabled');
-
-
-//     link.forEach((linka, i) => {
-
-//         if(i === 0) {
-//             linka.classList.remove('hide');
-
-//             titulo.forEach((title, j) => {
-//                 if(j === i) {
-//                     title.classList.add('hide');
-//                 }
-//             }) 
-//         } else {
-//             if (!linka.classList.contains('hide'))
-//                 linka.classList.add('hide');
-
-//                 titulo.forEach((title, j) => {
-//                     if(j === i) {
-//                         title.classList.remove('hide');
-//                     }
-//                 }) 
-//         }
-//     })
-// })
-
-
-// painelCOD.addEventListener('click', () => {
-//     painelCOD.classList.remove('disabled');
-//     painelCOD.classList.add('active');
-
-//     painelInvestimentos.classList.remove('active');
-//     painelMLBB.classList.remove('active');
-
-//     painelInvestimentos.classList.add('disabled');
-//     painelMLBB.classList.add('disabled');
-
-
-//     link.forEach((linka, i) => {
-
-//         if(i === 1) {
-//             linka.classList.remove('hide');
-
-//             titulo.forEach((title, j) => {
-//                 if(j === i) {
-//                     title.classList.add('hide');
-//                 }
-//             })
-//         } else {
-//             if (!linka.classList.contains('hide'))
-//                 linka.classList.add('hide');
-
-//                 titulo.forEach((title, j) => {
-//                     if(j === i) {
-//                         title.classList.remove('hide');
-//                     }
-//                 }) 
-//         }
-//     })
-// })
-
-
-// painelMLBB.addEventListener('click', () => {
-//     painelMLBB.classList.remove('disabled');
-//     painelMLBB.classList.add('active');
-
-//     painelInvestimentos.classList.remove('active');
-//     painelCOD.classList.remove('active');
-
-//     painelInvestimentos.classList.add('disabled');
-//     painelCOD.classList.add('disabled');
-
-//     link.forEach((linka, i) => {
-
-//         if(i === 2) {
-//             linka.classList.remove('hide');
-
-//             titulo.forEach((title, j) => {
-//                 if(j === i) {
-//                     title.classList.add('hide');
-//                 }
-//             })
-//         } else {
-//             if (!linka.classList.contains('hide'))
-//                 linka.classList.add('hide');
-
-//                 titulo.forEach((title, j) => {
-//                     if(j === i) {
-//                         title.classList.remove('hide');
-//                     }
-//                 }) 
-//         }
-//     })
-// })
 
 
 
@@ -227,5 +117,3 @@ containerPerfil.forEach((perfil, i) => {
         })
     })
 })
-
-
