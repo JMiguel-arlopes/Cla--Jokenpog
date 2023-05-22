@@ -1,7 +1,7 @@
 :root {
     --gradiente: linear-gradient(to right, rgb(0, 0, 70), rgb(0, 0, 160));
     --gradiente-secundario: linear-gradient(to right, rgb(198, 0, 198), #cda137);
-    --gradiente-terciario: linear-gradient(to right top, rgb(198, 0, 198), rgb(0, 0, 160));
+    --gradiente-terciario: linear-gradient(to right top,rgb(0, 0, 160) 5%, rgb(198, 0, 198));
 }
 
 html {
