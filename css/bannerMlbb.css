@@ -1,5 +1,7 @@
 :root {
     --gradiente: linear-gradient(to right, rgb(0, 0, 70), rgb(0, 0, 160));
+    --gradiente-secundario: linear-gradient(to right, rgb(198, 0, 198), #cda137);
+    --gradiente-terciario: linear-gradient(to right top, rgb(0, 0, 75), rgb(0, 0, 160));
 }
 
 html {
@@ -29,7 +31,7 @@ body{
     animation: animar calc(120s/var(--i)) linear infinite;
 }
 
-.banner .bolhas span:nth-of-type(even) {
+.bg-animado .bolhas span:nth-of-type(even) {
     animation: animar-2 calc(120s/var(--i)) linear infinite;
 }
 
@@ -78,8 +80,8 @@ body{
 
 .cabecalho img{
     position: relative;
-    height: 3em;
-    width: 3em;
+    height: 4em;
+    width: 4em;
     border-radius: 50%;
 
     border: solid 1.4px #111;
@@ -119,7 +121,7 @@ body{
 .menu {
     display: none;
     position: relative;
-    font-size: 3em;
+    font-size: 4em;
 }
 
 
@@ -161,7 +163,6 @@ body{
 
 
 .banner {
-    /* height: 100vh; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -185,7 +186,7 @@ body{
         transform: translateY(0) scale(0);
     }
 
-    90% {
+    93% {
         opacity: 1;
     }
 
@@ -200,9 +201,15 @@ body{
     0% {
         transform: translateY(0) scale(0);
     }
+
+    93% {
+        opacity: 1;
+    }
+
     100% {
         transform: translateY(-100vh) scale(1);
-        background-color: rgb(255, 243, 175);
+        background-color: rgb(255, 217, 217);
+        opacity: 0;
     }
 }
 
@@ -217,7 +224,7 @@ body{
 
 .banner .content .recepcao {
     padding: .3em;
-    background: var(--gradiente);
+    background: var(--gradiente-secundario);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -252,7 +259,7 @@ body{
 }
 
 .banner .content b {
-    background: var(--gradiente);
+    background: var(--gradiente-terciario);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -260,8 +267,9 @@ body{
 }
 
 .mini-frase {
-    font-size: .7em;
-    color: #444;
+    font-size: .75em;
+    color: #ddd;
+    opacity: 0.3;
 }
 
 .buttons {
@@ -341,15 +349,17 @@ body{
 }
 
 .banner .content-game .description img {
-    width: 2em;
-    height: 2em;
+    width: 2.5em;
+    height: 2.5em;
 }
 
 
 .banner .content-game .description p {
-    color: black;
+    color: rgb(255, 226, 226);
     padding: 1em;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
 }
 
 
@@ -362,15 +372,20 @@ body{
         overflow-x: hidden;
     }
 
+    .bg-animado .bolhas span{
+        margin: 0 4.5px;
+    }
+
     .cabecalho {
-        padding: .4rem 0rem;
+        padding: .5rem 0rem;
     }
 
     .cabecalho .title-responsive{
         padding-left: 1rem;
         border-left: 1px solid white;
         font-weight: 800;
-        font-size: 1.6em;
+        font-size: 1.8em;
+        letter-spacing: .05em;
         display: block;
     }
 
@@ -411,7 +426,6 @@ body{
 
     .menu {
         display: block;
-        
     }
 
 
@@ -438,6 +452,7 @@ body{
 
     .banner .content-game{
         max-width: 100vw;
+        /* box-shadow: 0 0 50px rgb(0, 0, 0); */
     }
 
     .banner .content-game .description{
