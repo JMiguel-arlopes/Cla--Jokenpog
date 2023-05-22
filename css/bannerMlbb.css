@@ -1,5 +1,5 @@
 :root {
-    --gradiente: linear-gradient(to right, rgb(0, 0, 70), rgb(0, 0, 160));
+    --gradiente: linear-gradient(to right, rgb(0, 0, 82), rgb(0, 0, 160));
     --gradiente-secundario: linear-gradient(to right, rgb(198, 0, 198), #cda137);
     --gradiente-terciario: linear-gradient(to right top,rgb(0, 0, 160) 5%, rgb(198, 0, 198));
 }
@@ -92,7 +92,7 @@ body{
     display: none;
 }
 
-.cabecalho .content a {
+.cabecalho .content nav a {
     text-decoration: none;
     color: #bbb;
     text-transform: uppercase;
@@ -106,12 +106,12 @@ body{
     border-left: 1px solid #bbb;
 }
 
-.cabecalho .content a.first-item:hover {
+.cabecalho .content nav a.first-item:hover {
    text-decoration: underline;
    border-bottom: none;
 }
 
-.cabecalho .content a:hover {
+.cabecalho .content nav a:hover {
     color: #fff;
     letter-spacing: 1px;
     border-bottom: solid 2px darkblue;
@@ -364,6 +364,90 @@ body{
 
 
 
+
+
+
+
+
+
+
+/* container plataformas */
+
+.container {
+    text-align: center;
+    padding: 1rem 3rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .92), rgba(0, 0, 0, .92)), url(../img/Kagura\ Mobile\ Legends.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container-2 {
+    height:100vh;
+}
+
+.titulo-secundario {
+    font-size: 1.5em;
+    margin: .5rem 0;
+    font-weight: 700;
+}
+
+.titulo-secundario b {
+    background: var(--gradiente-terciario);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+    font-size: 1.1em;
+}
+
+.container .lista-classes {
+    margin: 3.5rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    
+}
+
+.container .lista-classes li {
+    padding: 0 2rem 1rem 2rem;
+    background: linear-gradient(to right top,#11111190,rgba(0, 0, 5, 0.9));
+
+    border-radius: 15px;
+    box-shadow: 0 0 20px darkblue,
+    inset 0 0 10px blue;
+}
+
+/* .container .lista-classes li:nth-of-type(even) {
+    box-shadow: 0 0 30px rgb(170, 0, 0),
+    inset 0 0 10px red;
+} */
+
+.container .lista-classes li img {
+    height: 2.5rem;
+    transform: translateY(-50%);
+}
+
+.container .lista-classes li p {
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #ddd;
+    
+}
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 991px) {
     body {
         font-size: 70%;
@@ -433,7 +517,7 @@ body{
         width: 100vw;
         height: auto;
         flex-direction: column-reverse;
-        padding: 1.5rem 1rem 2rem 1rem;
+        padding: 1.5rem 1rem 1rem 1rem;
         align-items: center;
         justify-content: center;
         gap: 2rem;
@@ -452,7 +536,6 @@ body{
 
     .banner .content-game{
         max-width: 100vw;
-        /* box-shadow: 0 0 50px rgb(0, 0, 0); */
     }
 
     .banner .content-game .description{
@@ -473,4 +556,55 @@ body{
         background-size: cover;
         background-position: center top;
     }
+
+
+
+
+
+
+    .container {
+        padding: 1rem;
+
+        background-image: linear-gradient(rgba(0, 0, 0, .92), rgba(0, 0, 0, .92)), url(../img/Kagura\ Mobile\ Legends.jpg);
+        background-size: cover;
+        background-position: 20%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .container .mini-frase{
+       font-size: .7rem;
+    }
+
+    .titulo-secundario{
+        font-size: 1.4rem;
+    }
+
+    .container .lista-classes {
+        margin: 3.2rem 0 2.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+
+    .container .lista-classes li {
+        padding: .5rem;
+        border-radius: 50%;
+    }
+
+    .container .lista-classes li img {
+        height: 2rem;
+        transform: translateY(0);
+        
+    }
+
+    .container .lista-classes li p {
+        letter-spacing: 1px;
+        font-size: .5;
+        display: none;
+    }
+
+    
 }
