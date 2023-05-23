@@ -374,8 +374,12 @@ body{
 /* container plataformas */
 
 .container {
-    text-align: center;
+    background-color: black;
     padding: 1rem 3rem;
+}
+
+.emblemas{
+    text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, .92), rgba(0, 0, 0, .92)), url(../img/Kagura\ Mobile\ Legends.jpg);
     background-size: cover;
     background-position: center;
@@ -441,6 +445,98 @@ body{
 
 
 
+
+
+
+
+.regras {
+    display: grid;
+    grid-template-columns: .75fr 1fr 1.25fr;
+    align-items: center;
+    gap: 0.5rem;
+}
+.regras .content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.regras .box-regras {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.regras .content .title-regra {
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: .2s;
+}
+
+.regras .content .title-regra.active {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 700;
+
+    padding-bottom: .3em;
+    border-bottom: dashed 2px rgb(0, 183, 0);
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}
+
+
+.img-regra {
+    max-width: 30vw;
+    display: none;
+}
+
+.img-regra.active {
+    display: block;
+}
+
+.descricao-regra {
+    color: rgb(179, 177, 255);
+    letter-spacing: .8px;
+    font-size: 1.1em;
+    padding: .5em 0;
+    line-height: 1rem;
+    font-weight: lighter;
+}
+
+
+.lista-proibicoes, .lista-direitos, .lista-deveres, .lista-objetivos {
+    text-align: left;
+    display: none;
+}
+
+.lista-proibicoes.active,
+.lista-direitos.active,
+.lista-deveres.active,
+.lista-objetivos.active {
+    animation: opacity .4s linear;
+    display: block;
+    
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+        transform: translate3d(2rem, 0, 0);
+    }
+}
 
 
 
@@ -564,12 +660,10 @@ body{
 
     .container {
         padding: 1rem;
+    }
 
-        background-image: linear-gradient(rgba(0, 0, 0, .92), rgba(0, 0, 0, .92)), url(../img/Kagura\ Mobile\ Legends.jpg);
-        background-size: cover;
+    .emblemas {
         background-position: 20%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
     }
 
     .container .mini-frase{
@@ -581,7 +675,7 @@ body{
     }
 
     .container .lista-classes {
-        margin: 3.2rem 0 2.5rem 0;
+        margin: 2rem 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
