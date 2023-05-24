@@ -454,8 +454,11 @@ body{
     grid-template-columns: .75fr 1fr 1.25fr;
     align-items: center;
     gap: 0.5rem;
+
+    background: linear-gradient(black, transparent 85%),  radial-gradient(red, black);
 }
-.regras .content{
+
+.regras .content {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -464,7 +467,14 @@ body{
     align-items: center;
 }
 
+.regras .content .lista-regras {
+    height: 100%;
 
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: flex-start;
+}
 
 .regras .box-regras {
     text-align: left;
@@ -514,20 +524,18 @@ body{
     padding: .5em 0;
     line-height: 1rem;
     font-weight: lighter;
+    text-align: left;
 }
 
 
-.lista-proibicoes, .lista-direitos, .lista-deveres, .lista-objetivos {
+.lista-regras {
     text-align: left;
     display: none;
 }
 
-.lista-proibicoes.active,
-.lista-direitos.active,
-.lista-deveres.active,
-.lista-objetivos.active {
+.lista-regras.active {
     animation: opacity .4s linear;
-    display: block;
+    display: flex;
     
 }
 
