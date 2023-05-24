@@ -454,8 +454,12 @@ body{
     grid-template-columns: .75fr 1fr 1.25fr;
     align-items: center;
     gap: 0.5rem;
+    padding: 1rem;
+    position: relative;
 
-    background: linear-gradient(black, transparent 85%),  radial-gradient(red, black);
+    background:
+     /* linear-gradient(black, black, red, black, black ); */
+      radial-gradient(red, black 70%);
 }
 
 .regras .content {
