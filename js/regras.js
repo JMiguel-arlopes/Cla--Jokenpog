@@ -89,3 +89,73 @@ btnDeveres.addEventListener('click', () => {
     direitos.classList.remove('active');
     deveres.classList.add('active');
 })
+
+
+
+
+
+
+
+
+
+
+
+// interação extensoes:
+
+const containerBoxs = document.querySelector('.box-extensoes');
+const caixas = document.querySelectorAll('[data-box]');
+
+// 1º forma:
+
+caixas.forEach(elemento => {
+    elemento.addEventListener('click', () => {
+        const dataElemento = elemento.dataset.box;
+
+        caixas.forEach( i => {
+            i.classList.remove('disabled');
+
+            if (i != elemento) {
+                const noClickBox = i.dataset.box;
+                containerBoxs.classList.remove(`active-box-${noClickBox}`);
+                i.classList.add('disabled');
+            }
+        })
+        containerBoxs.classList.add(`active-box-${dataElemento}`);
+    })
+})
+    
+
+// 2º forma :
+
+// containerBoxs.addEventListener('click', (e) => {
+//     const caixa = e.target.parentNode.parentNode;
+//     const dataCaixa = caixa.dataset.box;
+
+//     if(caixa.dataset.box) {
+//         console.log('kk')
+//         caixas.forEach(box => {
+
+//             box.classList.remove('disabled');
+
+//             if(box != caixa) {
+//                 const dataBox = box.dataset.box;
+//                 containerBoxs.classList.remove(`active-box-${dataBox}`);
+//                 box.classList.add('disabled');
+//             }
+//         })
+//         containerBoxs.classList.add(`active-box-${dataCaixa}`)
+//     } else {
+//         caixas.forEach(box => {
+//             box.classList.remove('disabled')
+//             containerBoxs.classList.remove(`active-box-${dataCaixa}`)
+//         })
+//     }
+// })
+
+
+// window.addEventListener('scroll', () => {
+//     caixas.forEach(box => {
+//         const dataBox = box.dataset.box;
+//         containerBoxs.classList.remove(`active-box-${dataBox}`);
+//     })
+// })
