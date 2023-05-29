@@ -675,6 +675,28 @@ body{
     display: flex;
     flex-direction: row;
     position: relative;
+    
+}
+
+.slides::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(to right,
+        black,
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.6) 50%,
+        transparent 70%);
+    pointer-events: none;
 }
 
 .swipper .slides input {
@@ -682,7 +704,7 @@ body{
 }
 
 .swipper .slides .slide {
-    min-height: 40vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -691,11 +713,7 @@ body{
 
     position: relative;   
 
-    background: linear-gradient(to right, black 45%, transparent), url(../img/lesley-bakcground.jpg);
-    background-position: right top;
-    background-size: cover;
-
-    transition: 2s;
+    transition: 1.5s;
 }
 
 .swipper .slides .slide::after {
@@ -708,20 +726,89 @@ body{
     max-width: 50%;
 }
 
-.swipper .slides .slide .content{
+.swipper .slides .first {
+    background:
+        url(../img/lesley-bakcground.jpg);
+    background-position: right top;
+    background-size: cover;
+}
+
+.swipper .slides .second {
+    background:
+        url(../img/Kagura-background-cut.jpg);
+    background-position: right top;
+    background-size: cover;
+}
+
+.swipper .slides .third {
+    background:
+        url(../img/Guinevere-cut.jpg);
+    background-position: right top;
+    background-size: cover;
+}
+
+.swipper .slides .fourth {
+    background:
+        url(../img/lesley-bakcground.jpg);
+    background-position: right top;
+    background-size: cover;
+}
+
+
+
+
+.swipper .slides .slide .content {
+    opacity: 0;
     max-width: 50%;
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes opacity {
+    0%,80% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
+}
+
+#radio1:checked ~ .first .content{
+    animation: opacity 1.6s linear;
+    opacity: 1;
+}
+
+#radio2:checked ~ .second .content{
+    animation: opacity 1.6s linear;
+    opacity: 1;
+}
+
+#radio3:checked ~ .third .content{
+    animation: opacity 1.6s linear;
+    opacity: 1;
+}
+
+#radio4:checked ~ .fourth .content{
+    animation: opacity 1.6s linear;
+    opacity: 1;
 }
 
 .swipper .slides .title-perfil {
+    margin-left: 1rem;
     padding: .1em;
     font-size: clamp(1em ,3em, 50vw);
     font-weight: 700;
 }
 
+
+
+
 .swipper .slides .info-perfil {
+    margin-left: 1rem;
     padding: .5em;
     font-size: 1.5em;
     font-weight: 500;
+    position: relative;
 }
 
 
@@ -732,18 +819,30 @@ body{
     transform: translateX(-50%);
     left: 50vw;
     bottom: 2em;
+    z-index: 100;
 }
 
 .slides .navigation .manual-btn{
     border-radius: 50%;
     padding: 5px;
     border: 3px solid red;
+    
+}
 
+.manual-btn:hover {
+    background-color: red;
 }
 
 .slides .navigation .manual-btn:not(:last-child){
-    margin-right: 4vw;
+    margin-right: 5vw;
 }
+
+
+
+
+
+
+
 
 
 #radio1:checked ~ .first{
