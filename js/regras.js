@@ -159,3 +159,17 @@ caixas.forEach(elemento => {
 //         containerBoxs.classList.remove(`active-box-${dataBox}`);
 //     })
 // })
+
+
+
+
+var botoes = queryAll('ss');
+
+botoes.forEach(botao => {
+
+    
+
+
+
+
+})
