@@ -453,6 +453,7 @@ body{
 
 
 .regras {
+    min-height: 40vh;
     display: grid;
     grid-template-columns: .75fr 1.25fr 1.5fr;
     align-items: center;
@@ -621,7 +622,11 @@ body{
     bottom: 0;
     position: absolute;
     filter: blur(1px);
-    background: linear-gradient(75deg, rgba(0, 0, 0, .75) 30%, rgba(30, 30, 30, 0.75), rgba(0, 0, 0, .75) 70%);
+    background:
+        linear-gradient
+        (75deg, rgba(0, 0, 0, .75) 30%,
+        rgba(30, 30, 30, 0.75),
+        rgba(0, 0, 0, .75) 70%);
 }
 
 .extensoes .box-extensoes .x .content p {
@@ -691,7 +696,7 @@ body{
         black,
         rgba(0, 0, 0, 0.95),
         rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.85),
         rgba(0, 0, 0, 0.8),
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.6) 50%,
@@ -704,7 +709,7 @@ body{
 }
 
 .swipper .slides .slide {
-    min-height: 100vh;
+    min-height: 100%;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -716,15 +721,11 @@ body{
     transition: 1.5s;
 }
 
-.swipper .slides .slide::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 60vw;
-    max-width: 50%;
+.swipper .slides .slide span {
+    width: 30vw;
+    height: 100%;
 }
+
 
 .swipper .slides .first {
     background:
@@ -759,9 +760,13 @@ body{
 
 .swipper .slides .slide .content {
     opacity: 0;
+    min-height: 80%;
     max-width: 50%;
     position: relative;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 @keyframes opacity {
@@ -773,30 +778,20 @@ body{
     }
 }
 
-#radio1:checked ~ .first .content{
+#radio1:checked ~ .first .content,
+#radio2:checked ~ .second .content,
+#radio3:checked ~ .third .content,
+#radio4:checked ~ .fourth .content {
     animation: opacity 1.6s linear;
     opacity: 1;
 }
 
-#radio2:checked ~ .second .content{
-    animation: opacity 1.6s linear;
-    opacity: 1;
-}
-
-#radio3:checked ~ .third .content{
-    animation: opacity 1.6s linear;
-    opacity: 1;
-}
-
-#radio4:checked ~ .fourth .content{
-    animation: opacity 1.6s linear;
-    opacity: 1;
-}
 
 .swipper .slides .title-perfil {
+    text-transform: uppercase;
     margin-left: 1rem;
     padding: .1em;
-    font-size: clamp(1em ,3em, 50vw);
+    font-size: clamp(1em, 2.5em, 40vw);
     font-weight: 700;
 }
 
@@ -826,11 +821,19 @@ body{
     border-radius: 50%;
     padding: 5px;
     border: 3px solid red;
-    
+    transition: .5;
 }
 
-.manual-btn:hover {
-    background-color: red;
+/* .manual-btn:hover, */
+#radio1:checked ~ .navigation .manual-btn-1,
+#radio2:checked ~ .navigation .manual-btn-2,
+#radio3:checked ~ .navigation .manual-btn-3,
+#radio4:checked ~ .navigation .manual-btn-4  {
+    background: red;
+    box-shadow:
+    0 0 20px red,
+    0 0 10px red,
+    0 0 5px red;
 }
 
 .slides .navigation .manual-btn:not(:last-child){
@@ -866,6 +869,83 @@ body{
         opacity: 0;
         transform: translate3d(2rem, 0, 0);
     }
+}
+
+.model {
+    background-color: #000000c6;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5vh 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100000;
+
+    display: none;
+}
+
+.model.active {
+    display: flex;
+}
+
+.model-slide{
+    background-color: rgb(237, 19, 19);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+    width: 75vw;
+
+    border-radius: 10px;
+    border: green solid 5px;
+    overflow: hidden;
+}
+
+.model-slide .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+ 
+.model-slide .content h2{
+    color: goldenrod;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.model-slide p{
+    color: black;
+    font-size: clamp(.5em, 1em, 1.1em);
+}
+
+.model-slide .box-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+
+    padding: .5rem;
+    height: 100%;
+    background-color: rgb(42, 201, 201);
+}
+
+
+.model-slide .box-status img{
+    height: 4.5em;
+    width: 4.5em;
+    border: 3.5px white solid;
+    border-radius: 50%;
+    
 }
 
 
@@ -997,10 +1077,11 @@ body{
 
     .titulo-secundario{
         font-size: 1.4rem;
+        display: none;
     }
 
     .container .lista-classes {
-        margin: 2rem 0;
+        margin: 1rem 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1025,5 +1106,16 @@ body{
         display: none;
     }
 
+
+
+
+
+
+
+
+
+    .swipper .slides .slide {
+        min-height: 45vh;
+    }
     
 }
