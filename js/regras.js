@@ -163,13 +163,54 @@ caixas.forEach(elemento => {
 
 
 
-var botoes = queryAll('ss');
 
-botoes.forEach(botao => {
+let counter = 2;
+const inputs = document.querySelectorAll('[data-input]');
 
+function slide() {
     
+    inputs.forEach(btnInput => {
+        btnInput.addEventListener('click', el => {
+            const clickInput = el.target.dataset.input;
+            counter = clickInput;
+        })
+    })
+
+    if (counter > inputs.length) {
+        counter = 1;
+    }
+
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+}
+
+setInterval(slide, 5000);
 
 
 
 
+
+
+
+
+
+
+const model = document.querySelector('[data-model]');
+const btnModel = document.querySelectorAll('.swipper .slides .slide span');
+
+btnModel.forEach(btn => {
+    btn.addEventListener('click', () => {
+        model.classList.add('active');
+    })
+})
+
+
+
+
+model.addEventListener('click', (el) => {
+    console.log(el.target.className);
+
+    if(el.target.className) {
+        model.classList.remove('active');
+    }
 })
