@@ -692,15 +692,7 @@ body{
     left: 0;
     width: 100vw;
     height: 100%;
-    background: linear-gradient(to right,
-        black,
-        rgba(0, 0, 0, 0.95),
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.85),
-        rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.6) 50%,
-        transparent 70%);
+    
     pointer-events: none;
 }
 
@@ -719,6 +711,7 @@ body{
     position: relative;   
 
     transition: 1.5s;
+    animation: sombreamento 1.6s linear;
 }
 
 .swipper .slides .slide span {
@@ -769,6 +762,24 @@ body{
     justify-content: space-evenly;
 }
 
+@keyframes sombreamento {
+    0%, 10% {
+        opacity: 0;
+    } 
+    100% {
+        /* background: linear-gradient(to right,
+        black,
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.6) 50%,
+        transparent 70%); */
+        opacity: 1;
+    }
+}
+
 @keyframes opacity {
     0%,80% {
         opacity: 0;
@@ -782,7 +793,35 @@ body{
 #radio2:checked ~ .second .content,
 #radio3:checked ~ .third .content,
 #radio4:checked ~ .fourth .content {
+    
     animation: opacity 1.6s linear;
+    opacity: 1;
+}
+
+#radio1:checked ~ .first::after,
+#radio2:checked ~ .second::after,
+#radio3:checked ~ .third::after,
+#radio4:checked ~ .fourth::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(to right,
+        black,
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.6) 50%,
+        transparent 70%);
+    
+    pointer-events: none;
+    animation: sombreamento 1.6s linear;
     opacity: 1;
 }
 
