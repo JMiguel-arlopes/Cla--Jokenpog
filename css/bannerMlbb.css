@@ -878,21 +878,7 @@ body{
     margin-left: -300vw;
 }
 
-@keyframes translate {
-    0% {
-        opacity: 0;
-        transform: translate3d(2rem, 0, 0);
-    }
-}
 
-@keyframes sombreamento {
-    0%, 10% {
-        opacity: 0;
-    } 
-    100% {
-        opacity: 1;
-    }
-}
 
 .model {
     background-color: #000000c6;
@@ -969,6 +955,22 @@ body{
     border: 3.5px white solid;
     border-radius: 50%;
     
+}
+
+@keyframes translate {
+    0% {
+        opacity: 0;
+        transform: translate3d(2rem, 0, 0);
+    }
+}
+
+@keyframes sombreamento {
+    0%, 10% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
 }
 
 
