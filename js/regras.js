@@ -164,8 +164,9 @@ caixas.forEach(elemento => {
 
 
 
-let counter = 2;
+let counter = 1;
 const inputs = document.querySelectorAll('[data-input]');
+// const models = document.querySelectorAll('[data-modelSlide]');
 
 function slide() {
     
@@ -182,35 +183,55 @@ function slide() {
 
     document.getElementById('radio' + counter).checked = true;
     counter++;
+
+    setTimeout(slide, 5000)
 }
 
-setInterval(slide, 5000);
+slide();
+
+// function k () {
+//     models.forEach(model => {
+
+//         if(model.dataset.modelslide == counter - 1) {
+//             console.log(model.dataset.modelslide)
+//         }
+//     })
+// }
+
+// setInterval(k, 1000)
 
 
 
-
-
-
-
-
-
-
-const model = document.querySelector('[data-model]');
+const containerModel = document.querySelector('[data-model]');
 const btnModel = document.querySelectorAll('.swipper .slides .slide span');
+const models = document.querySelectorAll('[data-modelSlide]');
 
 btnModel.forEach(btn => {
-    btn.addEventListener('click', () => {
-        model.classList.add('active');
+
+    btn.addEventListener('click', (el) => {
+
+        models.forEach(model => {
+
+            if(model.dataset.modelslide == el.target.dataset.btn) {
+                model.classList.add('active');
+
+                models.forEach(i => {
+                    if(i != model){
+                        i.classList.remove('active');
+                    }
+                })
+            }
+
+            
+        })
+    
+        containerModel.classList.add('active');
     })
 })
 
-
-
-
-model.addEventListener('click', (el) => {
-    console.log(el.target.className);
-
-    if(el.target.className) {
-        model.classList.remove('active');
-    }
-})
+containerModel.addEventListener('click', el => {
+    
+        if(el.target.id == 'modalID') {
+            containerModel.classList.remove('active');
+        }
+    })
