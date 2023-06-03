@@ -115,6 +115,7 @@ caixas.forEach(elemento => {
             i.classList.remove('disabled');
 
             if (i != elemento) {
+                
                 const noClickBox = i.dataset.box;
                 containerBoxs.classList.remove(`active-box-${noClickBox}`);
                 i.classList.add('disabled');
@@ -184,23 +185,10 @@ function slide() {
     document.getElementById('radio' + counter).checked = true;
     counter++;
 
-    setTimeout(slide, 5000)
+    setTimeout(slide, 10000)
 }
 
 slide();
-
-// function k () {
-//     models.forEach(model => {
-
-//         if(model.dataset.modelslide == counter - 1) {
-//             console.log(model.dataset.modelslide)
-//         }
-//     })
-// }
-
-// setInterval(k, 1000)
-
-
 
 const containerModel = document.querySelector('[data-model]');
 const btnModel = document.querySelectorAll('.swipper .slides .slide span');
@@ -221,8 +209,6 @@ btnModel.forEach(btn => {
                     }
                 })
             }
-
-            
         })
     
         containerModel.classList.add('active');
@@ -230,7 +216,7 @@ btnModel.forEach(btn => {
 })
 
 containerModel.addEventListener('click', el => {
-    
+
         if(el.target.id == 'modalID') {
             containerModel.classList.remove('active');
         }
