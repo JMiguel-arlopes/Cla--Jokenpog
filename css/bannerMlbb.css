@@ -707,6 +707,8 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
 
     position: relative;   
 
@@ -751,13 +753,13 @@ body{
 
 .swipper .slides .slide .content {
     opacity: 0;
-    min-height: 80%;
-    max-width: 50%;
+    min-height: 90%;
+    max-width: 60%;
     position: relative;
     z-index: 10;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 
@@ -769,16 +771,6 @@ body{
     animation: translate 1.6s linear;
     opacity: 1;
 }
-
-
-/* #radio1:checked ~ .first,
-#radio2:checked ~ .second,
-#radio3:checked ~ .third,
-#radio4:checked ~ .fourth { 
-    dis
-
-
-} */
 
 #radio1:checked ~ .first::after,
 #radio2:checked ~ .second::after,
@@ -808,24 +800,62 @@ body{
 
 
 .swipper .slides .title-perfil {
+    background: var(--gradiente-terciario);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
     text-transform: uppercase;
-    margin-left: 1rem;
     padding: .1em;
     font-size: clamp(1em, 2.5em, 40vw);
-    font-weight: 700;
+    font-weight: 900;
+
+    border-bottom: 2px rgb(0, 0, 136) solid;
 }
 
+.swipper .slides .lista-cards-hdf {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 
+.lista-cards-hdf .card-hdf {
+    width: 20vw;
+    max-height: 20vw;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: .5rem;
+
+    background-color: red;
+    border: 1px white solid;
+    box-shadow: 0 0 0 1px red;
+    border-radius: 10px;
+}
+
+.lista-cards-hdf .card-hdf img{
+    max-width: 25%;
+}
 
 
 .swipper .slides .info-perfil {
-    margin-left: 1rem;
-    padding: .5em;
-    font-size: 1.5em;
+    padding: 1em 0 .5em 0;
+    font-size: .8em;
     font-weight: 500;
     position: relative;
+    text-transform: uppercase;
+    color: gold;
 }
 
+.swipper .slides .info-perfil span{
+    color: rgb(0, 255, 0);
+    font-size: .8em;
+}
 
 
 .slides .navigation {
@@ -840,24 +870,23 @@ body{
 .slides .navigation .manual-btn{
     border-radius: 50%;
     padding: 5px;
-    border: 3px solid red;
-    transition: .5;
+    border: 3.5px solid red;
+    transition: 1s;
 }
 
-/* .manual-btn:hover, */
 #radio1:checked ~ .navigation .manual-btn-1,
 #radio2:checked ~ .navigation .manual-btn-2,
 #radio3:checked ~ .navigation .manual-btn-3,
 #radio4:checked ~ .navigation .manual-btn-4  {
+    transform: scaleX(1.5);
+    border-radius: 3.5px;
     background: red;
     box-shadow:
-    0 0 20px red,
-    0 0 10px red,
     0 0 5px red;
 }
 
 .slides .navigation .manual-btn:not(:last-child){
-    margin-right: 5vw;
+    margin-right: 6vw;
 }
 
 
