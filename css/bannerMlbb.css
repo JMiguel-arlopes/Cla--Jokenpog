@@ -1,7 +1,13 @@
+@import url();
+
+
+
 :root {
     --gradiente: linear-gradient(to right, rgb(0, 0, 82), rgb(0, 0, 160));
     --gradiente-secundario: linear-gradient(to right, rgb(198, 0, 198), #cda137);
     --gradiente-terciario: linear-gradient(to right top,rgb(0, 0, 160) 5%, rgb(198, 0, 198));
+    --efeito: radial-gradient(ellipse farthest-side, rgba(0, 111, 255, 0.15), transparent);
+    --cor-de-fundo: #1d2024;
 }
 * {
     box-sizing: border-box;
@@ -15,6 +21,7 @@ html {
 body{
     overflow-x: hidden;
     font-family: 'Varela', sans-serif;
+    background-color: black;
 }
 
 .bg-animado {
@@ -128,6 +135,66 @@ body{
 }
 
 
+
+
+.container-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    align-items: center;
+    background-color: black;
+    gap: 1.1rem 0;
+}
+
+.container-video .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.container-video .row .categoria {
+    padding: .65em 1.4em;
+    background-color: rgba(10, 10, 90, 0.4);
+    border-radius: 40px;
+    color: blue;
+    letter-spacing: 1px;
+}
+
+.container-video .row h2{
+    font-weight: 700;
+    border-radius: 40px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.container-video .row .stars {
+    font-size: 1.4em;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.container-video .row .star {
+    color: gold;
+    margin-right: 1em;
+}
+
+.container-video p {
+    font-size: 1em;
+    line-height: 1.6em;
+    font-weight: 500;
+}
+
+.video {
+    width: 100%;
+    min-height: 20vh;
+    border-radius: 12px;
+    /* margin-top: 1.2rem; */
+}
 
 
 
@@ -701,7 +768,7 @@ body{
 }
 
 .swipper .slides .slide {
-    min-height: 100%;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -996,6 +1063,83 @@ body{
     
 }
 
+
+
+
+
+
+.about {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-box {
+    display: flex;
+    flex-direction: row;
+    width: 75vw;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.about-box:nth-last-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.about-content {
+    width: 40%;
+}
+
+.about-content h2 {
+    line-height: 1;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.about-content a {
+    text-decoration: none;
+    display: block;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 1em 0;
+    color: #2EBFFF;
+}
+
+.about-content a:hover .fa-arrow-right{
+    margin-left: .6em;
+}
+
+.fa-arrow-right {
+    margin-left: .3em;
+    transition: .2s;
+    font-size: .85em;
+}
+
+.img-about {
+    max-width: 50%;
+
+}
+
+
+
+
+
+
+
+
+
+
 @keyframes translate {
     0% {
         opacity: 0;
@@ -1133,6 +1277,7 @@ body{
 
     .emblemas {
         background-position: 20%;
+        
     }
 
     .container .mini-frase{
@@ -1145,7 +1290,7 @@ body{
     }
 
     .container .lista-classes {
-        margin: 1rem 0;
+        margin: .3rem 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1180,6 +1325,81 @@ body{
 
     .swipper .slides .slide {
         min-height: 45vh;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .about {
+        padding: 2rem .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-box {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 85vw;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 0;
+    }
+    
+    .about-box:nth-last-of-type(even) {
+        flex-direction: column-reverse;
+    }
+    
+    .about-content {
+        width: 100%;
+    }
+    
+    .about-content h2 {
+        line-height: 1.1;
+        font-size: 8vw;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .about-content p {
+        font-size: 4.5vw;
+        font-weight: lighter;
+    }
+    
+    .about-content a {
+        text-decoration: none;
+        display: block;
+        font-size: 4.5vw;
+        font-weight: 500;
+        margin: 1em 0;
+        color: #2EBFFF;
+    }
+    
+    .about-content a:hover .fa-arrow-right{
+        margin-left: .6em;
+    }
+    
+    .fa-arrow-right {
+        margin-left: .3em;
+        transition: .2s;
+        font-size: .85em;
+    }
+    
+    .img-about {
+        max-width: 100%;
+        margin-bottom: 10px;
     }
     
 }
