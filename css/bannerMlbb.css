@@ -957,13 +957,6 @@ body{
 }
 
 
-
-
-
-
-
-
-
 #radio1:checked ~ .first{
     margin-left: 0%;
 }
@@ -979,6 +972,9 @@ body{
 #radio4:checked ~ .first{
     margin-left: -300vw;
 }
+
+
+
 
 
 
@@ -1003,31 +999,91 @@ body{
 }
 
 .model-slide{
-    background-color: rgb(237, 19, 19);
     display: none;
-    grid-template-columns: 2fr 1fr;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 40vh;
-    width: 75vw;
-
+    height: 45vh;
+    width: 80vw;
+    background-color: black;
     border-radius: 10px;
     border: green solid 5px;
     overflow: hidden;
 }
 
 .model-slide.active {
-    display: grid;
+    display: block;
 }
 
+.model-slide .modal-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.container-img-modal {
+    height: 60%;
+    position: relative;
+}
+
+.container-img-modal img {
+    width: 100%;
+}
+
+
+
 .model-slide .content {
-    height: 100%;
+    height: 45%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
     padding: 1rem;
+    position: relative;
+    background-color: rgb(237, 19, 19);
+}
+
+.content .name-modal {
+    position: absolute;
+    top: -39.82%;
+    left: 0;
+    width: 50%;
+    height: 40%;
+    background-color: rgb(237, 19, 19);
+    border-top-right-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: #000 solid 10px;
+    border-right: #000 solid 10px;
+    z-index: 10;
+}
+
+.content .name-modal::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -15.2%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 10;
+
+    box-shadow: -10px 10px rgb(237, 19, 19);
+}
+
+.content .name-modal h3{
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: center;
+
+    background-color: gold;
+    padding: .45em 1.1em;
+    border-radius: 10px;
+    color: black;
 }
  
 .model-slide .content h2{
