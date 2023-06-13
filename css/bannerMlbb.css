@@ -1013,6 +1013,7 @@ body{
 }
 
 .model-slide .modal-perfil {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1084,12 +1085,20 @@ body{
     padding: .45em 1.1em;
     border-radius: 10px;
     color: black;
+    pointer-events: none;
 }
- 
+
 .model-slide .content h2{
     color: goldenrod;
     font-size: 1.5em;
     font-weight: 700;
+}
+.model-slide .s.active {
+    display: flex;
+}
+
+.model-slide .s.disabled {
+    display: none;
 }
 
 .model-slide p{
@@ -1097,27 +1106,108 @@ body{
     font-size: clamp(.5em, 1em, 1.1em);
 }
 
-.model-slide .box-status {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    box-sizing: border-box;
-    text-align: center;
 
-    padding: .5rem;
-    height: 100%;
-    background-color: rgb(42, 201, 201);
+.modal-grafico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.content-graficos {
+    height: 100%;
+    max-width: 60%;
+    padding: 1rem;
+}
 
-.model-slide .box-status img{
-    height: 4.5em;
-    width: 4.5em;
-    border: 3.5px white solid;
+.content-graficos p{
+    color: blue
+}
+
+.btn-modal {
+    font-size: 1.5em;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-modal img{
+    border: blue 1px solid;
+    width: 40%;
     border-radius: 50%;
+}
+.loading {
+    margin: 1rem 0;
+}
+
+.container-progress {
+    height: .5rem;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-loading h3{
+    color: gold;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    position: absolute;
+    height: 100%;
+    width: var(--p);
+    background: green;
+    animation: progress-bar 3.5s ease-out;
+    overflow: hidden;
+    text-align: center;
+}
+
+.brilho {
+    position: absolute;
+    background: linear-gradient(to right, green, rgb(0, 160, 0),green);
+    transform: skewX(-25deg);
+    width: 20px;
+    height: 100%;
+    left: 50%;
+    animation: brilho 2.5s linear infinite;
     
 }
+
+@keyframes brilho {
+    0%{
+        left: 0;
+        opacity: 0;
+    }
+    10%{opacity: 1}
+    100%{left:100%}
+}
+
+
+@keyframes progress-bar {
+    0% {width: 0%}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
