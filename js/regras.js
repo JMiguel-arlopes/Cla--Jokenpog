@@ -111,7 +111,7 @@ caixas.forEach(elemento => {
     elemento.addEventListener('click', () => {
         const dataElemento = elemento.dataset.box;
 
-        caixas.forEach( i => {
+        caixas.forEach(i => {
             i.classList.remove('disabled');
 
             if (i != elemento) {
