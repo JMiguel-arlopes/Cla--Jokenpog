@@ -1019,7 +1019,7 @@ body{
     width: 100%;
 }
 
-
+/* 
 
 .model-slide .content {
     height: 45%;
@@ -1093,7 +1093,7 @@ body{
     color: black;
     font-size: clamp(.5em, 1em, 1.1em);
 }
-
+ */
 
 
 
@@ -1102,9 +1102,20 @@ body{
 
 
 .modal-grafico {
-    background-color: black;
+    /* background-color: black; */
     width: 100%;
-    padding: 1rem 1rem 0 1rem;
+    /* padding: 1rem 1rem 0 1rem; */
+    position: relative;
+}
+
+.modal-grafico .background-painel-modal {
+    background: linear-gradient(transparent, black);
+    text-align: center;
+    position: relative;
+}
+
+.modal-grafico .background-painel-modal .img-painel-modal {
+    width: 80vw;
 }
 
 .content-graficos {
@@ -1115,12 +1126,13 @@ body{
     align-items: center;
     gap: 1rem;
     position: relative;
-    padding-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: black;
 }
 
-.content-graficos:nth-of-type(even) {
+.content-graficos:nth-of-type(odd) {
     flex-direction: row-reverse;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
 }
 
 
