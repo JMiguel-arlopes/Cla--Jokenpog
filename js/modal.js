@@ -14,7 +14,8 @@ btnModel.forEach(btn => {
 
                 const bannerPrincipal = model.querySelector('.modal-perfil');
                 const bannerGrafico = model.querySelector('.modal-grafico');
-                const btnGraficos = model.querySelector('[data-btnGraficos]')
+                const btnGraficos = model.querySelector('[data-btnGraficos]');
+
 
                 model.classList.add('active');
                 models.forEach(i => {
@@ -48,10 +49,10 @@ btnModel.forEach(btn => {
 })
 
 containerModel.addEventListener('click', el => {
-
-
-    if(el.target.id == 'modalID') {
+    
+    if(el.target.id == 'modalID' || el.target.className == 'fa-solid fa-x') {
         containerModel.classList.remove('active');
+        
     }
 
 })
