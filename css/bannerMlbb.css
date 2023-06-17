@@ -916,7 +916,6 @@ body{
     font-size: .8em;
 }
 
-
 .slides .navigation {
     display: flex;
     position: absolute;
@@ -1106,12 +1105,56 @@ body{
     width: 100%;
     /* padding: 1rem 1rem 0 1rem; */
     position: relative;
+    animation: sombreamento .3s linear;
 }
 
 .modal-grafico .background-painel-modal {
     background: linear-gradient(transparent, black);
     text-align: center;
     position: relative;
+    
+}
+
+.modal-grafico .background-painel-modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(transparent, black);
+    text-align: center;
+}
+
+.background-painel-modal .name-modal {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: #eee;
+    text-shadow: 0 0 5px white;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    padding: .45em .8em .2em .8em;
+
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background: linear-gradient(rgb(10, 10, 10), black);
+}
+
+.background-painel-modal .fa-x{
+    font-size: 1rem;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: .6rem .96rem;
+    color:rgb(0, 0, 136);
+    text-shadow: 0 0 10px blue;
+
+    border-top-left-radius: 10px;
+    /* border-top-right-radius: 12px; */
+    background: linear-gradient(rgb(5, 5, 5), black, black);
 }
 
 .modal-grafico .background-painel-modal .img-painel-modal {
@@ -1165,7 +1208,7 @@ body{
 }
 
 .img-about-grafico.user {
-    background-color: #11111120;
+    background-color: #11111110;
     padding: 1rem;
     border-radius: 15px;
 }
@@ -1364,12 +1407,8 @@ body{
 }
 
 @keyframes sombreamento {
-    0%, 10% {
-        opacity: 0;
-    } 
-    100% {
-        opacity: 1;
-    }
+    0%, 10% {opacity: 0} 
+    100% {opacity: 1}
 }
 
 
