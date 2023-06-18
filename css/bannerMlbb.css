@@ -658,7 +658,7 @@ body{
     min-height: 50%;
 }
 
-.extensoes .box-extensoes .x.disabled{
+.extensoes .box-extensoes .{
     filter: blur(1px);
     position: relative;
 }
@@ -669,11 +669,11 @@ body{
     text-align: center;
 }
 
-.extensoes .box-extensoes .x.disabled .content{
+.extensoes .box-extensoes . .content{
     opacity: 0.5;
 }
 
-.extensoes .box-extensoes .x.disabled::after{
+.extensoes .box-extensoes .::after{
     content: '';
     left: 0;
     top: 0;
@@ -695,7 +695,7 @@ body{
 
 }
 
-.extensoes .box-extensoes .x.disabled .content p {
+.extensoes .box-extensoes . .content p {
     display: none;
     margin: .5em 0;
 
@@ -987,125 +987,15 @@ body{
     display: flex;
 }
 
-.model-slide{
-    display: none;
-    height: 55vh;
-    width: 100vw;
-    background-color: black;
-    border-radius: 10px;
-    border: green solid 5px;
-    overflow: hidden;
-}
-
-.model-slide.active {
-    display: block;
-}
-
-.model-slide .modal-perfil {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.container-img-modal {
-    height: 60%;
-    position: relative;
-}
-
-.container-img-modal img {
-    width: 100%;
-}
-
-/* 
-
-.model-slide .content {
-    height: 45%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    padding: 1rem;
-    position: relative;
-    background-color: rgb(237, 19, 19);
-}
-
-.content .name-modal {
-    position: absolute;
-    top: -39.82%;
-    left: 0;
-    width: 50%;
-    height: 40%;
-    background-color: rgb(237, 19, 19);
-    border-top-right-radius: 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-top: #000 solid 10px;
-    border-right: #000 solid 10px;
-    z-index: 10;
-}
-
-.content .name-modal::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: -15.2%;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    z-index: 10;
-
-    box-shadow: -10px 10px rgb(237, 19, 19);
-}
-
-.content .name-modal h3{
-    font-size: 1.5em;
-    font-weight: 700;
-    text-align: center;
-    vertical-align: center;
-
-    background-color: gold;
-    padding: .45em 1.1em;
-    border-radius: 10px;
-    color: black;
-    pointer-events: none;
-}
-
-.model-slide .content h2{
-    color: goldenrod;
-    font-size: 1.5em;
-    font-weight: 700;
-}
-.model-slide .s.active {
-    display: flex;
-}
-
-.model-slide .s.disabled {
-    display: none;
-}
-
-.model-slide p{
-    color: black;
-    font-size: clamp(.5em, 1em, 1.1em);
-}
- */
-
-
-
-
-
-
-
 .modal-grafico {
-    /* background-color: black; */
+    display: none;
     width: 100%;
-    /* padding: 1rem 1rem 0 1rem; */
     position: relative;
-    animation: sombreamento .3s linear;
+    animation: sombreamento .45s linear;
+}
+
+.modal-grafico.active {
+    display: block;
 }
 
 .modal-grafico .background-painel-modal {
@@ -1131,7 +1021,7 @@ body{
     font-weight: 600;
     letter-spacing: 1.2px;
     color: #eee;
-    text-shadow: 0 0 5px white;
+    text-shadow: 0 0 7px rgb(203, 255, 255);
     position: absolute;
     bottom: 0;
     left: 0%;
@@ -1153,7 +1043,6 @@ body{
     text-shadow: 0 0 10px blue;
 
     border-top-left-radius: 10px;
-    /* border-top-right-radius: 12px; */
     background: linear-gradient(rgb(5, 5, 5), black, black);
 }
 
@@ -1175,7 +1064,6 @@ body{
 
 .content-graficos:nth-of-type(odd) {
     flex-direction: row-reverse;
-    /* padding: 1rem 0; */
 }
 
 
@@ -1192,9 +1080,10 @@ body{
 
 
 .img-about-grafico {
-    background-color: #111;
-    padding: 1.5rem;
+    background-color: #060606;
+    padding: 1.25rem;
     border-radius: 15px;
+    /* border-left: 1px #222 solid; */
 }
 
 .img-about-grafico img {
@@ -1211,9 +1100,10 @@ body{
     background-color: #11111110;
     padding: 1rem;
     border-radius: 15px;
+    display: inline-block;
 }
 
-.img-about-grafico .user img {
+.img-about-grafico.user img {
     width: 6rem;
 }
 
@@ -1231,8 +1121,8 @@ body{
 
 
 .content-graficos p{
-    color: blue
-    line-hie
+    color: white;
+    text-shadow: -1px 1px blue;
 }
 
 .btn-modal {
@@ -1261,31 +1151,107 @@ body{
     overflow: hidden;
 }
 
-.container-loading h3{
-    color: gold;
+.loading .text-lane{
+    margin-bottom: .2rem;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
+
+.text-gold {
+    color: rgb(255, 221, 31);
+    text-shadow: 0 0 10px rgb(255, 221, 31);
+}
+
+.text-exp {
+    color: rgb(255, 26, 26);
+    text-shadow: 0 0 10px rgb(255, 26, 26);
+}
+
+.text-mid {
+    color: rgb(10, 10, 255);
+    text-shadow: 0 0 10px #3131ff;
+}
+
+.text-jungle {
+    color: rgb(0, 190, 0);
+    text-shadow: 0 0 10px rgb(0, 190, 0);
+}
+.text-roaming {
+    color: darkorange;
+    text-shadow: 0 0 10px darkorange;
+}
+
+
 
 .progress-bar {
     border-radius: 10px;
     position: absolute;
     height: 100%;
-    width: var(--p);
-    background: green;
-    animation: progress-bar 3.5s ease-out;
+    width: 0;
+    background: darkblue;
     overflow: hidden;
     text-align: center;
 }
 
+.progress-bar.active {
+    animation: progress-bar calc(var(--p) * .05s) linear;
+    width: calc(var(--p) * 1%);
+}
+
+
+.progress-gold {
+    background-color: rgb(223, 197, 0);
+}
+
+.progress-exp {
+    background-color: red;
+}
+
+.progress-mid {
+    background-color: darkblue;
+}
+
+.progress-jungle {
+    background-color: darkgreen;
+}
+
+.progress-roaming {
+    background-color: orange;
+}
+
+
 .brilho {
     position: absolute;
-    background: linear-gradient(to right, green, rgb(0, 160, 0),green);
     transform: skewX(-25deg);
-    width: 20px;
-    height: 100%;
-    left: 50%;
-    animation: brilho 2.5s linear infinite;
-    
+    width: 17px;
+    height: 90%;
+    left: 0%;
+    animation: brilho 5s linear infinite;
 }
+
+.brilho-gold{
+    background: linear-gradient(to right, rgb(223, 190, 0), rgb(255, 255, 10),rgb(223, 190, 0));
+}
+
+.brilho-exp{
+    background: linear-gradient(to right, red, rgb(255, 30, 30),red);
+}
+
+.brilho-mid{
+    background: linear-gradient(to right, darkblue, rgb(0, 0, 209),darkblue);
+}
+
+.brilho-jungle{
+    background: linear-gradient(to right, darkgreen, green,darkgreen);
+}
+
+.brilho-roaming{
+    background: linear-gradient(to right, orange, yellow,orange);
+}
+
+
+
 
 @keyframes brilho {
     0%{
