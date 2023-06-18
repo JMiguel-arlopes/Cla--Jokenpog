@@ -14,6 +14,7 @@
 
     <script defer src="js/regras.js"></script>
     <script defer src="js/modal.js"></script>
+    <script defer src="js/slide.js"></script>
     <script defer src="https://kit.fontawesome.com/bd92ca8629.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -288,7 +289,6 @@
             </section>
 
             <section class="swipper">
-                <!-- <div class="gradient"></div> -->
                 <div class="slides">
 
                     <input type="radio" name="radio-btn" id="radio1" data-input="1" checked>
@@ -468,9 +468,6 @@
                     
                     <!-- finished navigation -->
                 </div>
-
-                
-
             </section>
 
             <section class="about">
@@ -527,10 +524,10 @@
                 </div>
             </section>
 
-
             
-            <div class="model" id="modalID" data-model>
-                <div class="modal-grafico s disabled">
+            <section class="model" id="modalID" data-model>
+                <div class="modal-grafico" data-btn="1" data-modal>
+
                     <div class="background-painel-modal">
                         <img src="img/mobile legends/Ling -  Night Shades.png" alt="" class="img-painel-modal">
                         <h2 class="name-modal">Nosferatu</h2>
@@ -547,8 +544,77 @@
                         </p>
                     </div>
 
+                    <div class="content-graficos">
+                        <div class="img-about-grafico">
+                            <img src="img/marksman.png" alt="atirador">
+                        </div>
 
+                        <div class="content-principal-grafico grafico">
+                            <div class="loading">
+                                <h3 class="text-lane text-gold">Gold Lane</h3>
+                                <div class="container-progress">
+                                    <div style="--p:40"  class="progress-bar progress-gold" data-progressBar>
+                                        <div class="brilho-gold"></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
 
+                            <div class="loading">
+                                <h3 class="text-lane text-exp">Exp Lane</h3>
+                                <div class="container-progress">
+                                    <div style="--p:20" class="progress-bar progress-exp" data-progressBar>
+                                        <div class="brilho-exp"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="loading">
+                                <h3 class="text-lane text-mid">Mid Lane</h3>
+                                <div class="container-progress">
+                                    <div style="--p:80"  class="progress-bar progress-mid" data-progressBar>
+                                        <div class="brilho-mid"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="loading">
+                                <h3 class="text-lane text-jungle">Jungle</h3>
+                                <div class="container-progress">
+                                    <div style="--p:60" class="progress-bar progress-jungle"data-progressBar>
+                                        <div class="brilho-jungle"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="loading">
+                                <h3 class="text-lane text-roaming">Roaming</h3>
+                                <div class="container-progress">
+                                    <div style="--p:100" class="progress-bar progress-roaming" data-progressBar>
+                                        <div class="brilho-roaming"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="modal-grafico" data-btn="2" data-modal>
+                    <div class="background-painel-modal">
+                        <img src="img/mobile legends/Ling -  Night Shades.png" alt="" class="img-painel-modal">
+                        <h2 class="name-modal">Nosferatu</h2>
+                        <i class="fa-solid fa-x" data-fechaModal></i>
+                    </div>
+                    <div class="content-graficos informatin">
+                        <div class="img-about-grafico user">
+                            <img src="img/quiz-naruto-classico.jpg" alt="imagem">
+                        </div>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            "Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex."
+                        </p>
+                    </div>
 
                     <div class="content-graficos">
                         <div class="img-about-grafico">
@@ -596,135 +662,153 @@
                             <div class="loading">
                                 <h3>Gold</h3>
                                 <div class="container-progress">
-                                    <div class="progress-bar" style="--p:100%">
+                                    <div class="progress-bar" style="--p:100%"> <div class></div> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-grafico" data-btn="3" data-modal>
+                    <div class="background-painel-modal">
+                        <img src="img/mobile legends/Ling -  Night Shades.png" alt="" class="img-painel-modal">
+                        <h2 class="name-modal">Nosferatu</h2>
+                        <i class="fa-solid fa-x" data-fechaModal></i>
+                    </div>
+                    <div class="content-graficos informatin">
+                        <div class="img-about-grafico user">
+                            <img src="img/quiz-naruto-classico.jpg" alt="imagem">
+                        </div>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            "Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex."
+                        </p>
+                    </div>
+
+                    <div class="content-graficos">
+                        <div class="img-about-grafico">
+                            <img src="img/marksman.png" alt="atirador">
+                        </div>
+
+                        <div class="content-principal-grafico grafico">
+                            <div class="loading">
+                                <h3>Gold</h3>
+                                <div class="container-progress">
+                                    <div class="progress-bar" style="--p:40%">
+                                        <div class></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="loading">
+                                <h3>Gold</h3>
+                                <div class="container-progress">
+                                    <div class="progress-bar" style="--p:20%">
                                         <div class></div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            
 
-                <div class="model-slide" data-modelSlide="2">
-                    <div class="modal-perfil">
-                        <div class="modal-perfil s active">
-                            <div class="container-img-modal">
-                                <img src="img/mobile legends/IwWBH3.webp" alt="">
+                            <div class="loading">
+                                <h3>Gold</h3>
+                                <div class="container-progress">
+                                    <div class="progress-bar" style="--p:80%">
+                                        <div class></div>
+                                    </div>
+                                </div>
                             </div>
-    
-                            <div class="content">
-                                <span class="name-modal" data-btnGraficos>
-                                    <h3>Nosferatu</h3>
-                                </span>
-                                <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex."
-                                </p>
+
+                            <div class="loading">
+                                <h3>Gold</h3>
+                                <div class="container-progress">
+                                    <div class="progress-bar" style="--p:60%">
+                                        <div class></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="loading">
+                                <h3>Gold</h3>
+                                <div class="container-progress">
+                                    <div class="progress-bar" style="--p:100%"> <div class></div> </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="modal-grafico s disabled">
-                            <div class="content-graficos">
-                                <span class="btn-modal" data-btnGraficos>
-                                    <img src="img/quiz-naruto-classico.jpg" alt="">
-                                </span>
-    
-                                <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex."
-                                </p>
-    
-                                
-    
-                                <div class="loading">
-                                    <h3>Gold</h3>
-                                    <div class="container-progress">
-                                        <div class="progress-bar" style="--p:40%">
-                                            <div class></div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-    
-                                <div class="loading">
-                                    <h3>Gold</h3>
-                                    <div class="container-progress">
-                                        <div class="progress-bar" style="--p:20%">
-                                            <!-- <p class>20%</p> -->
-                                            <div class></div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="loading">
-                                    <h3>Gold</h3>
-                                    <div class="container-progress">
-                                        <div class="progress-bar" style="--p:80%">
-                                            <div class></div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="loading">
-                                    <h3>Gold</h3>
-                                    <div class="container-progress">
-                                        <div class="progress-bar" style="--p:60%">
-                                            <div class></div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="loading">
-                                    <h3>Gold</h3>
-                                    <div class="container-progress">
-                                        <div class="progress-bar" style="--p:100%">
-                                            <div class></div>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
                     </div>
                 </div>
 
-                <div class="model-slide" data-modelSlide="3">
-                    <div class="modal-perfil">
-                        <div class="container-img-modal">
-                            <img src="img/mobile legends/IwWBH3.webp" alt="">
-                        </div>
-
-                        <div class="content">
-                            <span class="name-modal">
-                                <h3>Nosferatu</h3>
-                            </span>
-                            <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex."
-                            </p>
-                        </div>
+                <div class="modal-grafico" data-btn="4" data-modal>
+                    <div class="background-painel-modal">
+                        <img src="img/mobile legends/Ling -  Night Shades.png" alt="" class="img-painel-modal">
+                        <h2 class="name-modal">Nosferatu</h2>
+                        <i class="fa-solid fa-x" data-fechaModal></i>
                     </div>
-                    <div class="modal-grafico">
+                    <div class="content-graficos informatin">
+                        <div class="img-about-grafico user">
+                            <img src="img/quiz-naruto-classico.jpg" alt="imagem">
+                        </div>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            "Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex."
+                        </p>
+                    </div>
 
+                    <div class="content-graficos">
+                        <div class="img-about-grafico">
+                            <img src="img/marksman.png" alt="atirador">
+                        </div>
+
+                        <div class="content-principal-grafico grafico">
+                            <div class="loading">
+                                <h3>Gold</h3>
+                                <div class="container-progress">
+                                    <div class="progress-bar" style="--p:40%">
+                                        <div class></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="loading">
+                                <h3>Gold</h3>
+                                <div class="container-progress">
+                                    <div class="progress-bar" style="--p:20%">
+                                        <div class></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="loading">
+                                <h3>Gold</h3>
+                                <div class="container-progress">
+                                    <div class="progress-bar" style="--p:80%">
+                                        <div class></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="loading">
+                                <h3>Gold</h3>
+                                <div class="container-progress">
+                                    <div class="progress-bar" style="--p:60%">
+                                        <div class></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="loading">
+                                <h3>Gold</h3>
+                                <div class="container-progress">
+                                    <div class="progress-bar" style="--p:100%"> <div class></div> </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="model-slide" data-modelSlide="4">
-                    <div class="modal-perfil">
-                        <div class="container-img-modal">
-                            <img src="img/mobile legends/IwWBH3.webp" alt="">
-                        </div>
-
-                        <div class="content">
-                            <span class="name-modal">
-                                <h3>Nosferatu</h3>
-                            </span>
-                            <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex."
-                            </p>
-                        </div>
-                    </div>
-                    <div class="modal-grafico">
-
-                    </div>
-                </div>
-
-            </div>
+            </section>
         </main>
 </body>
 </html>
