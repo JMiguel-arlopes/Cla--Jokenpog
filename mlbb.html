@@ -15,6 +15,7 @@
     <script defer src="js/regras.js"></script>
     <script defer src="js/modal.js"></script>
     <script defer src="js/slide.js"></script>
+    <script defer src="js/extensoes.js"></script>
     <script defer src="https://kit.fontawesome.com/bd92ca8629.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -213,42 +214,53 @@
             <section class="regras">
 
                 <div class="content box-regras">
-                    <p class="title-regra btn-objetivos active">Objetivos</p>
-                    <p class="title-regra btn-proibicoes">Proibições</p>
-                    <p class="title-regra btn-direitos">Direitos</p>
-                    <p class="title-regra btn-deveres">Deveres</p>
+                    <p class="title-regra btn-objetivos active" data-regra="objetivos">Objetivos</p>
+                    <p class="title-regra btn-proibicoes" data-regra="proibicoes">Proibições</p>
+                    <p class="title-regra btn-direitos" data-regra="direitos">Direitos</p>
+                    <p class="title-regra btn-deveres" data-regra="deveres">Deveres</p>
                 </div>
 
-                <img src="img/baixados (5)_preview_rev_1.png" alt="" class="img-regra valir active">
-                <img src="img/kagura - rain.png" alt="" class="img-regra kagura">
-                <img src="img/Joy_preview_rev_1.png" alt="" class="img-regra valir-collector">
-                <img src="img/wanwan-mworld.png" alt="" class="img-regra wanwan">
+                <img src="img/baixados (5)_preview_rev_1.png" alt="" class="img-regra valir active" data-regra="objetivos">
+                <img src="img/kagura - rain.png" alt="" class="img-regra kagura" data-regra="proibicoes">
+                <img src="img/Joy_preview_rev_1.png" alt="" class="img-regra valir-collector" data-regra="direitos">
+                <img src="img/wanwan-mworld.png" alt="" class="img-regra wanwan" data-regra="deveres">
                 
 
                 <div class="content">
-                    <div class="lista-regras lista-objetivos active">
+                    <div class="lista-regras lista-objetivos active" data-regra="objetivos">
                         <p class="descricao-regra">- O grupo tem, como seu principal objetivo, criar um espaço virtual para fazer amizades e interagir com as pessoas do clã.</p>
                     </div>
 
-                    <div class="lista-regras lista-proibicoes">
+                    <div class="lista-regras lista-proibicoes" data-regra="proibicoes">
                         <p class="descricao-regra">- Conteúdo pornografico.</p>
                         <p class="descricao-regra">- Quaisquer ofensa direta ou indireta aos companheiros.</p>
                         <p class="descricao-regra">- Revolução.</p>
                     </div>
 
-                    <div class="lista-regras lista-direitos">
+                    <div class="lista-regras lista-direitos" data-regra="direitos">
                         <p class="descricao-regra">- Caso sinta-se ofendido, informar a um dos Administradores</p>
                         <p class="descricao-regra">- Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
                         <p class="descricao-regra centralizar">- Liberdade de expressão!<br><span>(Atenção: Não fira a integridade de ninguém)</span></p>
                     </div>
 
-                    <div class="lista-regras lista-deveres">
+                    <div class="lista-regras lista-deveres" data-regra="deveres">
                         <p class="descricao-regra">- Ser respeitoso e cordial com todos.</p>
                         <p class="descricao-regra">- Convidar os membros para jogar</p>
                         <p class="descricao-regra">- Ser participativo no Grupo e no Game.</p>
                     </div>
                 </div>
             </section>
+
+
+
+
+
+
+
+
+
+
+
 
             <section class="container extensoes">
                 <div class="box-extensoes">
