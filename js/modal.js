@@ -37,6 +37,6 @@ function fecharModal(ExitBnt) {
     containerModel.classList.remove('active')
 }
 
-containerModel.addEventListener('click', (el) => fecharModal(el.target))
 btnModal.forEach(btn => btn.addEventListener('click', (e) => ativarModal(e.target.dataset.btn, modals)))
 modals.forEach(modal => modal.addEventListener('animationend', ativarBarraProgesso))
+containerModel.addEventListener('click', (el) => fecharModal(el.target))
