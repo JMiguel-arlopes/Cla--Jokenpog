@@ -117,6 +117,19 @@
     text-align: center;
     line-height: .8em;
     z-index: 100;
+    display: block;
+}
+
+.plataformas .container .box .content h1.active,
+.plataformas .container .box-2 .content h1.active,
+.plataformas .container .box-3 .content h1.active {
+    display: none;
+}
+
+.plataformas .container .box .content h1.disabled,
+.plataformas .container .box-2 .content h1.disabled,
+.plataformas .container .box-3 .content h1.disabled {
+    display: block;
 }
 
 .plataformas .container .box .content a,
@@ -132,18 +145,18 @@
     background-color: rgba(245, 222, 179, 0.103);
     border-radius: 10px;
     padding: .1em .3em;
+    display: none;
+}
+
+.plataformas .container .box .content a.active,
+.plataformas .container .box-2 .content a.active,
+.plataformas .container .box-3 .content a.active {
+    display: block
 }
 
 .plataformas .container .box .content a{
     color: rgb(0, 178, 0);
     background-color: rgba(43, 255, 0, 0.101);
-
-    /* background: linear-gradient(rgb(0, 255, 0), rgb(0, 80, 0));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-color: rgba(35, 157, 10, 0.629);
-    text-shadow: none; */
 }
 
 .plataformas .container .box-3 .content a{
@@ -156,12 +169,14 @@
 .plataformas .container .box-3 .content a:hover {
     letter-spacing: .05em;
     background-color: rgba(245, 222, 179, 0.178);
+    
 }
 
 .plataformas .container .box .content h1 span,
 .plataformas .container .box-2 .content h1 span,
 .plataformas .container .box-3 .content h1 span {
     font-size: 0.7em;
+    
 }
 
 .hide {
@@ -231,15 +246,20 @@
 
     .plataformas .container .box,
     .plataformas .container .box-3 {
-        padding: 6rem 1rem;
+        padding: 6rem .5rem;
     }
+
+    .plataformas .container .box.active,
+    .plataformas .container .box-3.active {
+        padding: 6rem 0rem;
+    }
+
     .plataformas .container .box-3 {
         background-position: 45% 0%;
     }
     
     
     .plataformas .container .box.active {
-        padding: 6rem 2rem;
         box-shadow: inset 0 0 35px rgba(0, 128, 0, 0.944);
     }
     .plataformas .container .box-2.active {
