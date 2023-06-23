@@ -633,16 +633,18 @@ body{
 
 .descricao-regra {
     color: white;
-    letter-spacing: .5px;
-    font-size: .75rem;
-    padding: .5em 0;
-    line-height: 0.9rem;
-    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: .8rem;
+    padding: .7rem 0;
+    line-height: 1.1rem;
+    font-weight: 600;
     text-align: left;
+    text-transform: uppercase;
+    text-shadow: -1px 2px black;
 }
 
 .descricao-regra.centralizar {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .descricao-regra span{
@@ -712,7 +714,6 @@ body{
     z-index: 15;
     animation: down 1.2s linear infinite;
 }
-
 
 
 .btn-extensao.active {  
@@ -803,18 +804,47 @@ body{
 }
 
 .btns-swipper {
-    height: 10vh;
+    padding: .6rem 2rem;
     width: 100vw;
-    background: linear-gradient(rgb(50, 0, 50), black);
+    background: linear-gradient(black, black);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 100;
+    gap: 15px;
+}
+
+.navigation .manual-btn{
+    border-radius: 50%;
+    padding: 5px;
+    border: 3.5px solid red;
+    transition: 1s;
+}
+
+.navigation .manual-btn.active{
+    transform: scaleX(1.5);
+    border-radius: 3.5px;
+    background: red;
+    box-shadow:
+    0 0 5px red;
 }
 
 .swipper .slides {
     width: 400%;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
-.slides::after {
+.swipper .slides::after {
     content: '';
     position: absolute;
     top: 0;
@@ -823,32 +853,25 @@ body{
     left: 0;
     width: 100vw;
     height: 100%;
+    background:
+         linear-gradient(to bottom,
+        black,
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8));
+    box-shadow:
+        inset 0 -3px 0 7px black,
+        inset 0 0 20px 3px red;
     pointer-events: none;
+    opacity: 1;
 }
 
 .swipper .slides input {
     display: none;
 }
-
-.swipper .slides .slide span{
-    position: relative;
-}
-
-.swipper .slides .slide span::before {
-    content:"";
-    height:100%;
-    width:100%;
-    padding:4px;
-    position: absolute;
-    bottom:-15px;
-    left:-4px;
-    z-index:-1;
-    background-color:#000;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-
 
 .swipper .slides .title-perfil {
     display: inline-block;
@@ -856,6 +879,7 @@ body{
     font-size: 2rem;
     font-weight: 900;
     position: relative;
+    pointer-events: none;
     
     z-index: 10;
     letter-spacing: 2px;
@@ -863,7 +887,6 @@ body{
     color: rgb(41, 0, 0);
     opacity: 1;
      
-
     text-shadow:
         0px 2px 0px red,
         0 0 5px red,
@@ -874,7 +897,7 @@ body{
 .swipper .slides .mensagem-modal {
     display: inline-block;
     text-transform: uppercase;
-    font-size: .4rem;
+    font-size: .5rem;
     font-weight: 900;
     
     z-index: 1;
@@ -893,12 +916,11 @@ body{
 }
 
 
-.swipper .slides .slide {
+.slides .slide {
     width: 100vw;
     position: relative;
     transition: 1.5s;
-    padding: 1.1rem 0;
-    animation: sombreamento 1.6s linear;
+    padding: 1.5rem 2rem 1.5rem 2rem;
     text-align: center;
 }
 
@@ -956,41 +978,6 @@ body{
     opacity: 1;
 }
 
-#radio1:checked ~ .first::after,
-#radio2:checked ~ .second::after,
-#radio3:checked ~ .third::after,
-#radio4:checked ~ .fourth::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background: linear-gradient(to bottom,
-        black,
-        rgba(0, 0, 0, 0.95),
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0.8));
-        /* rgba(0, 0, 0, 0.6) 50%,
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0.85),
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.95)); */
-    box-shadow:
-        inset 0 0 0 5px black,
-        inset 0 0 16px red;
-    pointer-events: none;
-    animation: sombreamento 1.6s linear;
-    opacity: 1;
-}
-
-
 
 .swipper .slides .lista-cards-hdf {
     display: flex;
@@ -1023,8 +1010,7 @@ body{
     max-width: 25%;
 }
 
-
-.swipper .slides .info-perfil {
+.slides .info-perfil {
     padding: 1em 0 .5em 0;
     font-size: .8em;
     font-weight: 500;
@@ -1033,43 +1019,18 @@ body{
     color: gold;
 }
 
-.swipper .slides .info-perfil span{
+.slides .type-statistic {
+    font-size: .8em;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+    color: white;
+}
+
+.slides .info-perfil span{
     color: rgb(0, 255, 0);
     font-size: .8em;
 }
-
-.slides .navigation {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    top: 2rem;
-    z-index: 100;
-}
-
-.slides .navigation .manual-btn{
-    border-radius: 50%;
-    padding: 5px;
-    border: 3.5px solid red;
-    transition: 1s;
-}
-
-#radio1:checked ~ .navigation .manual-btn-1,
-#radio2:checked ~ .navigation .manual-btn-2,
-#radio3:checked ~ .navigation .manual-btn-3,
-#radio4:checked ~ .navigation .manual-btn-4  {
-    transform: scaleX(1.5);
-    border-radius: 3.5px;
-    background: red;
-    box-shadow:
-    0 0 5px red;
-}
-
-.slides .navigation .manual-btn:not(:last-child){
-    margin-right: 15px
-}
-
 
 #radio1:checked ~ .first{
     margin-left: 0%;
@@ -1532,6 +1493,19 @@ body{
 
 .about-content a:hover .fa-arrow-right{
     margin-left: .6em;
+}
+
+
+
+[data-anime="bottom"] {
+    opacity: 0;
+    transform: translate3d(0, 5rem, 0);
+    transition: .3s;
+}
+
+[data-anime="bottom"].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
 .fa-arrow-right {
