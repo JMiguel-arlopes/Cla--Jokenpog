@@ -16,6 +16,8 @@
     <script defer src="js/modal.js"></script>
     <script defer src="js/slide.js"></script>
     <script defer src="js/extensoes.js"></script>
+    <script defer src="js/label-slide.js"></script>
+    <script defer src="js/scroll.js"></script>
     <script defer src="https://kit.fontawesome.com/bd92ca8629.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -215,7 +217,7 @@
                     <img src="img/zilong-gif.gif" alt="" class="img-regra valir active" data-regra="objetivos">
                     <img src="img/badang-gif.gif" alt="" class="img-regra kagura" data-regra="proibicoes">
                     <img src="img/gusion-gif.gif" alt="" class="img-regra wanwan" data-regra="deveres">
-                    <img src="img/haritao-gif.gif" alt="" class="img-regra valir-collector" data-regra="direitos">
+                    <img src="img/granger-gif.gif" alt="" class="img-regra valir-collector" data-regra="direitos">
                     
                     
 
@@ -225,21 +227,21 @@
                         </div>
 
                         <div class="lista-regras lista-proibicoes" data-regra="proibicoes">
-                            <p class="descricao-regra">- Conteúdo pornografico.</p>
-                            <p class="descricao-regra">- Quaisquer ofensa direta ou indireta aos companheiros.</p>
-                            <p class="descricao-regra">- Revolução.</p>
+                            <p class="descricao-regra">- Quaisquer mídias de conteúdo pornográfico.</p>
+                            <p class="descricao-regra">- Quaisquer ofensa direta ou indireta aos companheiros de equipe e membros do grupo.</p>
+                            <p class="descricao-regra">- Sugerir a não-vida ao coleguinha.</p>
                         </div>
 
                         <div class="lista-regras lista-direitos" data-regra="direitos">
-                            <p class="descricao-regra">- Caso sinta-se ofendido, informar a um dos Administradores</p>
+                            <p class="descricao-regra">- Caso sinta-se ofendido com qualquer conteúdo, informar a qualquer um dos Administradores.</p>
                             <p class="descricao-regra">- Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
                             <p class="descricao-regra centralizar">- Liberdade de expressão!<br><span>(Atenção: Não fira a integridade de ninguém)</span></p>
                         </div>
 
                         <div class="lista-regras lista-deveres" data-regra="deveres">
                             <p class="descricao-regra">- Ser respeitoso e cordial com todos.</p>
-                            <p class="descricao-regra">- Convidar os membros para jogar</p>
-                            <p class="descricao-regra">- Ser participativo no Grupo e no Game.</p>
+                            <p class="descricao-regra">- Convidar os membros para jogar.</p>
+                            <p class="descricao-regra">- Ser participativo no Grupo e nos Jogos.</p>
                         </div>
                     </div>
                 </div>
@@ -263,23 +265,12 @@
                 
             </section>
 
-
-
-
-
-
-
-
-
-
-
-
             <section class="container extensoes">
                 <h2 class="titulo-principal">Extensões</h2>
                 <div class="box-extensoes">
                     <div class="extensao">
                         <div class="btn-extensao" data-extensao="1">
-                            <h2>titulo</h2>
+                            <h2>Calculadora de WR</h2>
                         </div>
                         <div class="overflow">
                             <div class="content"  data-extensao="1">
@@ -329,14 +320,25 @@
             </section>
 
             <section class="swipper">
-                <div class="btns-swipper"></div>
+                <div class="btns-swipper">
+                    <div class="navigation">
+                        <label for="radio1" class="manual-btn manual-btn-1 active" data-label="1"></label>
+                        <label for="radio2" class="manual-btn manual-btn-2" data-label="2"></label>
+                        <label for="radio3" class="manual-btn manual-btn-3" data-label="3"></label>
+                        <label for="radio4" class="manual-btn manual-btn-4" data-label="4"></label>
+                    </div>
+                </div>
+
+                
                 <div class="slides">
                     
+
                     <input type="radio" name="radio-btn" id="radio1" data-input="1" checked>
                     <input type="radio" name="radio-btn" id="radio2" data-input="2">
                     <input type="radio" name="radio-btn" id="radio3" data-input="3">
                     <input type="radio" name="radio-btn" id="radio4" data-input="4">
 
+                    
 
                     <!-- slides -->
                     <div class="slide first" data-btn="1">
@@ -348,32 +350,32 @@
                                 <li class="card-hdf">
                                     <img src="img/sword.png" alt="">
                                     <h3 class="info-perfil">+5 mil</h3>
-                                    <h4>partidas</h4>
+                                    <h4 class="type-statistic">partidas</h4>
                                 </li>
                                 <li class="card-hdf">
                                     <img src="img/sword.png" alt="">
                                     <h3 class="info-perfil">+5 mil</h3>
-                                    <h4>partidas</h4>
+                                    <h4 class="type-statistic">partidas</h4>
                                 </li>
                                 <li class="card-hdf">
                                     <img src="img/sword.png" alt="">
                                     <h3 class="info-perfil">+5 mil</h3>
-                                    <h4>partidas</h4>
+                                    <h4 class="type-statistic">partidas</h4>
                                 </li>
                                 <li class="card-hdf active">
                                     <img src="img/sword.png" alt="">
                                     <h3 class="info-perfil">+5 mil</h3>
-                                    <h4>partidas</h4>
+                                    <h4 class="type-statistic">partidas</h4>
                                 </li>
                                 <li class="card-hdf active">
                                     <img src="img/sword.png" alt="">
                                     <h3 class="info-perfil">+5 mil</h3>
-                                    <h4>partidas</h4>
+                                    <h4 class="type-statistic">partidas</h4>
                                 </li>
                                 <li class="card-hdf active">
                                     <img src="img/sword.png" alt="">
                                     <h3 class="info-perfil">+5 mil</h3>
-                                    <h4>partidas</h4>
+                                    <h4 class="type-statistic">partidas</h4>
                                 </li>
                             </ul>
                         </div>
@@ -504,12 +506,7 @@
                     <!-- finished slides -->
 
                     <!-- navigation -->
-                    <div class="navigation">
-                        <label for="radio1" class="manual-btn manual-btn-1"></label>
-                        <label for="radio2" class="manual-btn manual-btn-2"></label>
-                        <label for="radio3" class="manual-btn manual-btn-3"></label>
-                        <label for="radio4" class="manual-btn manual-btn-4"></label>
-                    </div>
+                    
                     
                     <!-- finished navigation -->
                 </div>
@@ -517,7 +514,7 @@
 
             <section class="about">
                 <div class="about-box">
-                    <div class="about-content">
+                    <div class="about-content" data-anime="bottom">
                         <h2>Junta-se a nossa comunidade!</h2>
                         <p> 
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
@@ -527,11 +524,11 @@
                         <a href="#">Visite nossa Comunidade<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
 
-                    <img src="img/exemplo.webp" alt="" class="img-about">
+                    <img src="img/exemplo.webp" alt="" class="img-about" data-anime="bottom">
                 </div>
 
                 <div class="about-box">
-                    <div class="about-content">
+                    <div class="about-content" data-anime="bottom">
                         <h2>Quer aparecer no Youtube?</h2>
                         <p> 
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
@@ -540,11 +537,11 @@
                         </p>
                         <a href="#">Visite nosso Canal<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <img src="img/exemplo.webp" alt="" class="img-about">
+                    <img src="img/exemplo.webp" alt="" class="img-about" data-anime="bottom">
                 </div>
 
                 <div class="about-box">
-                    <div class="about-content">
+                    <div class="about-content" data-anime="bottom">
                         <h2>Deseja pôr diamantes mais baratos?</h2>
                         <p> 
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
@@ -553,10 +550,11 @@
                         </p>
                         <a href="#">Pegue mais barato<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <img src="img/exemplo.webp" alt="" class="img-about">
+                    <img src="img/exemplo.webp" alt="" class="img-about" data-anime="bottom">
                 </div>
+
                 <div class="about-box">
-                    <div class="about-content">
+                    <div class="about-content" data-anime="bottom">
                         <h2>Lorem Ipsum!</h2>
                         <p> 
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
@@ -565,7 +563,7 @@
                         </p>
                         <a href="#">Lorem Ipsum<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                    <img src="img/exemplo.webp" alt="" class="img-about">
+                    <img src="img/exemplo.webp" alt="" class="img-about" data-anime="bottom">
                 </div>
             </section>
 
@@ -604,6 +602,7 @@
                                     
                                 </div>
                             </div>
+
 
                             <div class="loading">
                                 <h3 class="text-lane text-exp">Exp Lane</h3>
