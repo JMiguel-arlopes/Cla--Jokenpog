@@ -1,5 +1,5 @@
 const containerModel = document.querySelector('[data-model]');
-const btnModal = document.querySelectorAll('.swipper .slides .slide span');
+const btnModal = document.querySelectorAll('.swipper .slides .slide');
 const modals = document.querySelectorAll('[data-modal]');
 
 const barraDeProgresso = document.querySelectorAll('[data-progressBar]');
