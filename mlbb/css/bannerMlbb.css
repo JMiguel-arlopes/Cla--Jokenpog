@@ -1,13 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 
-
 :root {
     --gradiente: linear-gradient(to right, rgb(0, 0, 82), rgb(0, 0, 160));
     --gradiente-secundario: linear-gradient(to right, rgb(198, 0, 198), #cda137);
     --gradiente-terciario: linear-gradient(to right top,rgb(0, 0, 160) 5%, rgb(198, 0, 198));
     --efeito: radial-gradient(ellipse farthest-side, rgba(0, 111, 255, 0.15), transparent);
-    --cor-de-fundo: #1f2227;
 }
 
 * {
@@ -22,7 +20,8 @@ html {
 body{
     overflow-x: hidden;
     font-family: 'Varela', sans-serif;
-    background-color: black;
+    /* background-color: #007bff; */
+    background-color: rgb(10, 0, 10);
 }
 
 .material-symbols-outlined {
@@ -65,6 +64,52 @@ body{
     background-size: cover;
     opacity: .1;
 }
+
+
+
+
+
+
+/* bg secundario */
+
+.bg-secundario{
+    position: relative;
+    background: linear-gradient(rgb(10, 0, 10),rgb(10, 0, 10));
+}
+
+.bg-secundario::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+
+    background: url(../img/WhatsApp\ Image\ 2023-06-23\ at\ 7.18.30\ PM\ \(2\).jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .1;
+    z-index: 1;
+}
+
+.bg-secundario::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: linear-gradient(
+        /* black, */
+        transparent 25%,
+        transparent 75%,
+       black);
+    pointer-events: none;
+    z-index: 1;
+}
+
 
 .titulo-principal {
     font-size: 2.4em;
@@ -155,13 +200,20 @@ body{
 
 
 
+
+
+
+
+
+
+
 .container-video {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1.5rem;
     align-items: center;
-    background-color: black;
+    background: linear-gradient(black 97%, rgb(10, 0, 10)); 
     gap: 1.1rem 0;
 }
 
@@ -176,7 +228,7 @@ body{
 
 .container-video .row .categoria {
     padding: .65em 1.4em;
-    background-color: rgba(10, 10, 90, 0.4);
+    /* background-color: rgba(10, 10, 90, 0.4); */
     border-radius: 40px;
     color: blue;
     letter-spacing: 1px;
@@ -517,15 +569,27 @@ body{
 
 
 
+   
+
+
+
+
+
+
+
+
 /* regras */
 
 .regras {
-    min-height: 40vh;
+    min-height: 50vh;
     position: relative;
-    background:
-        radial-gradient(red, black 70%);
+    z-index: 10;
     padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
+    
 
 .container-row-regras {
     padding: 0 3px;
@@ -577,7 +641,10 @@ body{
     align-items: center;
     justify-content: center;
     height: 4em;
-    background-color: rgb(0, 234, 255);
+    background-color: #060606;
+    box-shadow:
+      0 0 7px black,
+      0 0 10px black;
     border-radius: 6px;
     transition: all .5s;
     filter: blur(.4px);
@@ -586,16 +653,12 @@ body{
 .box-regras .item-regra.active {
     transform: scale(1.05);
     filter: none;
-    background-color: #060606;
+    background-color: rgb(0, 50, 255);
     box-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
+        0 0 4px rgb(0, 40, 255),
+        0 0 7px rgb(0, 40, 255),
+        0 0 10px darkblue,
+        0 0 15px darkblue;
 }
 
 .regras .box-regras .title-regra {
@@ -610,7 +673,9 @@ body{
 
 
 .regras .title-regra.active {
-    color: gold;
+    font-weight: 900;
+    color: rgb(235, 200, 0);
+    text-shadow: -1.5px 2.5px black;
     filter: none;
     font-size: 2em;
 }
@@ -643,10 +708,6 @@ body{
     text-shadow: -1px 2px black;
 }
 
-.descricao-regra.centralizar {
-    /* text-align: center; */
-}
-
 .descricao-regra span{
     color: gold;
     font-size: .9em;
@@ -664,12 +725,15 @@ body{
 /* extensoes */
 
 .container.extensoes {
-    background: radial-gradient(green, black 50%);
+    background: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 10;
 }
+
 
 .extensoes .box-extensoes {
     display: flex;
@@ -677,6 +741,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    position: relative;
 }
 
 .extensoes .box-extensoes .extensao{
@@ -686,6 +751,7 @@ body{
     flex-direction: column;
     min-height: 50%;
     overflow: hidden;
+    position: relative;
 }
 
 .btn-extensao {  
@@ -797,10 +863,10 @@ body{
 
 .swipper {
     padding: 0;
-    background: rgba(0, 255, 170, 0.084);
     overflow-x: hidden;
     position: relative;
-    
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .btns-swipper {
@@ -856,11 +922,12 @@ body{
     background:
          linear-gradient(to bottom,
         black,
-        rgba(0, 0, 0, 0.95),
         rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.88),
         rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.65),
         rgba(0, 0, 0, 0.8));
     box-shadow:
         inset 0 -3px 0 7px black,
@@ -1444,9 +1511,7 @@ body{
 
 
 .about {
-    min-height: 100vh;
     padding: 2rem 1rem;
-    background-color: #121212;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1456,7 +1521,7 @@ body{
 .about-box {
     display: flex;
     flex-direction: row;
-    width: 75vw;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     margin: 100px 0;
@@ -1540,9 +1605,13 @@ body{
     body {
         font-size: 70%;
         box-sizing: border-box;
-        background-color: #222;
         overflow-x: hidden;
+        /* background: linear-gradient(#100013, black); */
+        background-size: cover;
+        position: relative;
     }
+
+
 
     .bg-animado .bolhas span{
         margin: 0 4.5px;
@@ -1695,9 +1764,13 @@ body{
 
 
 
+    .regras {
+        background-color: rgba(0, 0, 10, 0.2);
+    }
 
-
-
+    .extensoes{
+        padding: 4rem 1rem;
+    }
 
 
 
@@ -1720,20 +1793,38 @@ body{
 
 
     .about {
-        padding: 2rem .5rem;
+        padding: 2rem 1.2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 2.5rem 0;
+        position: relative;
+    }
+
+    .about::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        
+        background: url(../img/MANO.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: .1;
     }
     
     .about-box {
         display: flex;
         flex-direction: column-reverse;
-        width: 85vw;
         justify-content: space-between;
         align-items: center;
-        margin: 0px 0;
+        margin: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 2px black solid;
     }
     
     .about-box:nth-last-of-type(even) {
@@ -1741,7 +1832,10 @@ body{
     }
     
     .about-content {
+        padding: .5rem 1rem;
         width: 100%;
+        border-top: 2px solid black;
+        background-color: rgb(5, 5, 15);
     }
     
     .about-content h2 {
@@ -1758,11 +1852,17 @@ body{
     
     .about-content a {
         text-decoration: none;
-        display: block;
+        display: inline-block;
+        text-align: center;
         font-size: 4.5vw;
         font-weight: 500;
-        margin: 1em 0;
+        margin: 1rem 0;
         color: #2EBFFF;
+        text-shadow:
+            0 0 1px white,
+            0 0 5px blue,
+            0 0 6px blue;
+        border-radius: 5px;
     }
     
     .about-content a:hover .fa-arrow-right{
@@ -1777,7 +1877,6 @@ body{
     
     .img-about {
         max-width: 100%;
-        margin-bottom: 10px;
     }
     
 }
