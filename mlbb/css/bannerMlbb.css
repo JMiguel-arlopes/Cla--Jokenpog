@@ -755,13 +755,13 @@ body{
 }
 
 .btn-extensao {  
-    background-color: darkblue;
+    background-color: rgb(0, 50, 255);
     text-align: center;
     padding: .5rem 0;
     width: 93vw;
     border-radius: 10px;
     transition: 1s;
-    overflow: hidden;
+    
     z-index: 10;
     position: relative;
 }
