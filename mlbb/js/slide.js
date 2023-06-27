@@ -9,7 +9,7 @@ function atualizaLabel() {
 }
 
 function slide() {
-
+    
     counter > inputs.length ? counter = 1 : false;
     document.getElementById('radio' + counter).checked = true;
     document.getElementById('radio' + counter).checked == true ? atualizaLabel() : false;
