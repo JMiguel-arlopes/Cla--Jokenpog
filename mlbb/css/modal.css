@@ -1,0 +1,338 @@
+.model {
+    background-color: #000000c6;
+    align-items: flex-end;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100000;
+
+    display: none;
+}
+
+.model.active {
+    display: flex;
+}
+
+.modal-grafico {
+    display: none;
+    width: 100%;
+    position: relative;
+    animation: sombreamento .45s linear;
+}
+
+.modal-grafico.active {
+    display: block;
+}
+
+.modal-grafico .background-painel-modal {
+    background: linear-gradient(transparent, black);
+    text-align: center;
+    position: relative;
+    
+}
+
+.modal-grafico .background-painel-modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(transparent, black);
+    text-align: center;
+}
+
+.background-painel-modal .name-modal {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: #eee;
+    text-shadow: 0 0 7px rgb(203, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    padding: .45em .8em .2em .8em;
+
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background: linear-gradient(rgb(10, 10, 10), black);
+}
+
+.background-painel-modal .fa-x{
+    font-size: 1rem;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: .6rem .96rem;
+    color:rgb(0, 0, 136);
+    text-shadow: 0 0 10px blue;
+
+    border-top-left-radius: 10px;
+    background: linear-gradient(rgb(5, 5, 5), black, black);
+}
+
+.modal-grafico .background-painel-modal .img-painel-modal {
+    width: 80vw;
+}
+
+.content-graficos {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding: 1rem;
+    background-color: black;
+}
+
+.content-graficos:nth-of-type(odd) {
+    flex-direction: row-reverse;
+}
+
+.img-about-grafico.user {
+    background-color: #11111110;
+    padding: 1rem;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.img-about-grafico.user img {
+    width: 6rem;
+    border-radius: 50%;
+    border:#007bff solid 3px;
+    box-shadow:
+        0 0 25px blue,
+        0 0 15px blue,
+        inset 0 0 15px blue;
+}
+
+.informatin::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background-color: #999;
+    border-radius: 10px;
+}
+
+
+.img-about-grafico {
+    padding: 0 .5rem;
+    height: 100%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.img-about-grafico .mago-img {
+    text-align: center;
+    width: 6rem;
+    border:#007bff solid 3px;
+    box-shadow:
+        0 0 25px blue,
+        0 0 15px blue,
+        inset 0 0 15px blue;
+    border-radius: 50%;
+}
+
+.img-about-grafico .atirador-img {
+    width: 6rem;
+    border:#007bff solid 3px;
+    box-shadow:
+        0 0 25px yellow,
+        0 0 15px yellow,
+        inset 0 0 15px yellow;
+    border-radius: 50%;
+}
+
+.img-about-grafico .soldado-img {
+    width: 6rem;
+    border:#007bff solid 3px;
+    box-shadow:
+        0 0 25px red,
+        0 0 15px red,
+        inset 0 0 15px red;
+    border-radius: 50%;
+}
+
+.img-about-grafico .tank-img {
+    width: 6rem;
+    border:#007bff solid 3px;
+    box-shadow:
+        0 0 25px darkorange,
+        0 0 15px darkorange,
+        inset 0 0 15px darkorange;
+    border-radius: 50%;
+}
+
+.img-about-grafico .suporte-img {
+    width: 6rem;
+    border:#007bff solid 3px;
+    box-shadow:
+        0 0 25px cyan,
+        0 0 15px cyan,
+        inset 0 0 15px cyan;
+    border-radius: 50%;
+}
+
+.img-about-grafico .assassino-img {
+    width: 6rem;
+    border:#007bff solid 3px;
+    box-shadow:
+        0 0 25px purple,
+        0 0 15px purple,
+        inset 0 0 15px purple;
+    border-radius: 50%;
+}
+
+
+
+.content-principal-grafico {
+    width: 100%;
+}
+
+.content-graficos p{
+    width: 100%;
+    color: #fff;
+    font-size: 1.25em;
+    line-height: 1.2;
+    letter-spacing: .5px;
+}
+
+
+.content-graficos p{
+    color: white;
+    text-shadow: -1px 1px blue;
+}
+
+.btn-modal {
+    font-size: 1.5em;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-modal img{
+    border: blue 1px solid;
+    width: 40%;
+    border-radius: 50%;
+}
+
+.loading:not(:last-child, :first-child) {
+    margin: 1rem 0;
+}
+
+.container-progress {
+    height: .5rem;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loading .text-lane{
+    margin-bottom: .2rem;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.text-gold {
+    color: rgb(255, 221, 31);
+    text-shadow: 0 0 10px rgb(255, 221, 31);
+}
+
+.text-exp {
+    color: rgb(255, 26, 26);
+    text-shadow: 0 0 10px rgb(255, 26, 26);
+}
+
+.text-mid {
+    color: rgb(10, 10, 255);
+    text-shadow: 0 0 10px #3131ff;
+}
+
+.text-jungle {
+    color: rgb(0, 190, 0);
+    text-shadow: 0 0 10px rgb(0, 190, 0);
+}
+.text-roaming {
+    color: darkorange;
+    text-shadow: 0 0 10px darkorange;
+}
+
+
+
+.progress-bar {
+    border-radius: 10px;
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background: darkblue;
+    overflow: hidden;
+    text-align: center;
+}
+
+.progress-bar.active {
+    animation: progress-bar calc(var(--p) * .05s) linear;
+    width: calc(var(--p) * 1%);
+}
+
+
+.progress-gold {
+    background-color: rgb(223, 197, 0);
+}
+
+.progress-exp {
+    background-color: red;
+}
+
+.progress-mid {
+    background-color: darkblue;
+}
+
+.progress-jungle {
+    background-color: darkgreen;
+}
+
+.progress-roaming {
+    background-color: orange;
+}
+
+
+.brilho {
+    position: absolute;
+    transform: skewX(-25deg);
+    width: 17px;
+    height: 90%;
+    left: 0%;
+    animation: brilho 5s linear infinite;
+}
+
+.brilho-gold{
+    background: linear-gradient(to right, rgb(223, 190, 0), rgb(255, 255, 10),rgb(223, 190, 0));
+}
+
+.brilho-exp{
+    background: linear-gradient(to right, red, rgb(255, 30, 30),red);
+}
+
+.brilho-mid{
+    background: linear-gradient(to right, darkblue, rgb(0, 0, 209),darkblue);
+}
+
+.brilho-jungle{
+    background: linear-gradient(to right, darkgreen, green,darkgreen);
+}
+
+.brilho-roaming{
+    background: linear-gradient(to right, orange, yellow,orange);
+}

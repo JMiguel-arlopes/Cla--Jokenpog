@@ -1,0 +1,140 @@
+.container.extensoes {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(transparent 60%, black);
+}
+
+
+.extensoes .box-extensoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.extensoes .box-extensoes .extensao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-extensao {  
+    background-color: rgb(0, 50, 255);
+    text-align: center;
+    padding: .5rem 0;
+    width: 93vw;
+    border-radius: 10px;
+    transition: 1s;
+    
+    z-index: 10;
+    position: relative;
+}
+
+.btn-extensao::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.5rem;
+    background: url(../img/down-arrow.png);
+    background-size: cover;
+    width: 1.5rem;
+    height: .8rem;
+    transition: 1s;
+    z-index: 15;
+    animation: down 1.2s linear infinite;
+}
+
+
+.btn-extensao.active {  
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: 1s;
+}
+
+
+.btn-extensao.active::before {
+    animation: up 1.2s linear infinite;
+}
+
+@keyframes down {
+    0%, 100%{transform: translateY(-60%)}
+    50%{transform: translateY(-35%)}
+}
+
+@keyframes up {
+    0%, 100%{transform: translateY(-60%) rotate(180deg)}
+    50%{transform: translateY(-35%) rotate(180deg)}
+}
+
+.btn-extensao h2 {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.box-extensoes .extensao .content {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    background-color: #111;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+.box-extensoes .extensao .content.active{
+    animation: chegar .8s linear;
+    display: block;
+    overflow: hidden;
+}
+
+.titulo-secundario_extensao {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--azul-principal);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@keyframes chegar {
+    0%{transform: translateY(-101%)}
+}
+
+.extensoes .box-extensoes .extensao .content p {
+    display: block;
+    text-align: left;
+    margin: .5em 0;
+}
+
+.extensoes .box-extensoes .extensao img{
+    max-width: 100%;
+}
+
+
+@media screen and (max-width: 991px) {
+    
+    .extensoes{
+        padding: 4rem 1rem;
+    }
+
+}

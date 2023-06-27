@@ -1,0 +1,129 @@
+.cabecalho {
+    position: relative;
+    z-index: 100;
+    padding: .4rem 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(245, 245, 245, 0.08);
+    filter: blur(3px);
+}
+
+.cabecalho .content {
+    position: relative;
+   display: flex;
+   align-items: center;
+}
+
+
+
+.cabecalho img{
+    position: relative;
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+
+    border: solid 1.4px #111;
+    margin: 0 1rem;
+}
+
+.cabecalho .title-responsive{
+    display: none;
+}
+
+.cabecalho .content nav a {
+    text-decoration: none;
+    color: #bbb;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .3s;
+    padding: 1rem;
+}
+
+.cabecalho .content nav a.first-item {
+    padding-left: 1rem;
+    border-left: 1px solid #bbb;
+}
+
+.cabecalho .content nav a.first-item:hover {
+   text-decoration: underline;
+   border-bottom: none;
+}
+
+.cabecalho .content nav a:hover {
+    color: #fff;
+    letter-spacing: 1px;
+    border-bottom: solid 2px darkblue;
+}
+
+
+.menu {
+    display: none;
+    position: relative;
+    font-size: 4em;
+}
+
+@media screen and (max-width: 991px) {
+    
+    .cabecalho {
+        padding: .5rem 0rem;
+    }
+
+    .cabecalho .title-responsive{
+        padding-left: 1rem;
+        border-left: 1px solid white;
+        font-weight: 800;
+        font-size: 1.8em;
+        letter-spacing: .05em;
+        display: block;
+    }
+
+    .cabecalho > h2 {
+        display: none;
+    }
+
+    .cabecalho .content nav {
+        display: none;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 30vw;
+        height: 25vh;
+        background-color: red;
+        border-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .cabecalho .content nav.active {
+        display: flex;
+    }
+
+    .cabecalho .content nav a {
+        padding: .5rem 1rem;
+    }
+
+    .cabecalho .content nav a.first-item {
+        padding-left: 1rem;
+        border-left: none;
+    }
+
+    .menu {
+        display: block;
+    }
+}

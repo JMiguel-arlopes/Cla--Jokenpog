@@ -1,0 +1,253 @@
+.swipper {
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.btns-swipper {
+    padding: .6rem 2rem;
+    width: 100vw;
+    background: linear-gradient(black, black);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 100;
+    gap: 15px;
+}
+
+.navigation .manual-btn{
+    border-radius: 50%;
+    padding: 5px;
+    border: 3.5px solid red;
+    transition: 1s;
+}
+
+.navigation .manual-btn.active{
+    transform: scaleX(1.5);
+    border-radius: 3.5px;
+    background: red;
+    box-shadow:
+    0 0 5px red;
+}
+
+.swipper .slides {
+    width: 400%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.swipper .slides::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background:
+         linear-gradient(to bottom,
+        black,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.88),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.8));
+    box-shadow:
+        inset 0 -3px 0 7px black,
+        inset 0 0 20px 3px red;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.swipper .slides input {
+    display: none;
+}
+
+.swipper .slides .title-perfil {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 900;
+    position: relative;
+    pointer-events: none;
+    
+    z-index: 10;
+    letter-spacing: 2px;
+    text-align: center;
+    color: rgb(41, 0, 0);
+    opacity: 1;
+     
+    text-shadow:
+        0px 2px 0px red,
+        0 0 5px red,
+        0 0 10px darkred;
+        
+}
+
+.swipper .slides .mensagem-modal {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: .5rem;
+    font-weight: 900;
+    
+    z-index: 1;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #d6d6d6;
+    opacity: .5;
+    text-shadow: 0 0 10px gold;
+
+    text-shadow: 0px 2px 0px #000;
+}
+
+.mensagem-modal b {
+    opacity: .7;
+    color: gold;
+}
+
+
+.slides .slide {
+    width: 100vw;
+    position: relative;
+    transition: 1.5s;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    text-align: center;
+}
+
+
+.swipper .slides .first {
+    background:
+        url(../img/lesley-bakcground.jpg);
+    background-position: right top;
+    background-size: cover;
+}
+
+.swipper .slides .second {
+    background:
+        url(../img/Kagura-background-cut.jpg);
+    background-position: right top;
+    background-size: cover;
+}
+
+.swipper .slides .third {
+    background:
+        url(../img/Guinevere-cut.jpg);
+    background-position: right top;
+    background-size: cover;
+}
+
+.swipper .slides .fourth {
+    background:
+        url(../img/lesley-bakcground.jpg);
+    background-position: right top;
+    background-size: cover;
+}
+
+
+.swipper .slides .slide .content {
+    opacity: 0;
+    max-width: 100%;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 3rem 0 0 0;
+    gap: 1rem;
+    text-align: center;
+    pointer-events: none;
+}
+
+
+#radio1:checked ~ .first .content,
+#radio2:checked ~ .second .content,
+#radio3:checked ~ .third .content,
+#radio4:checked ~ .fourth .content {
+    animation: translate 1.6s linear;
+    opacity: 1;
+}
+
+
+.swipper .slides .lista-cards-hdf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    pointer-events: none;
+}
+
+.lista-cards-hdf .card-hdf {
+    width: 22vw;
+    max-height: 22vw;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: .5rem;
+    pointer-events: none;
+    
+    background-color: red;
+    border: 1px white solid;
+    box-shadow: 0 0 0 1px red;
+    border-radius: 10px;
+}
+
+.lista-cards-hdf .card-hdf img{
+    max-width: 25%;
+}
+
+.slides .info-perfil {
+    padding: 1em 0 .5em 0;
+    font-size: .8em;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+    color: gold;
+}
+
+.slides .type-statistic {
+    font-size: .8em;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+    color: white;
+}
+
+.slides .info-perfil span{
+    color: rgb(0, 255, 0);
+    font-size: .8em;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -100vw;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -200vw;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -300vw;
+}
