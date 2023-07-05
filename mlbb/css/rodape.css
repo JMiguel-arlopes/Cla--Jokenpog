@@ -1,0 +1,91 @@
+.rodape {
+    background-color: var(--preto);
+    background-image: linear-gradient(rgba(19, 0, 86, 0.3), black),
+    url(../../img/bg.jpg);
+    border-top: 2px solid rgb(19, 0, 86);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+}
+
+.rodape .share {
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape .share a{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+    border: var(--border);
+    border-radius: 50%;
+    margin: .3rem;
+    color: #f5f5f5;
+    transition: all .2s;
+}
+
+.rodape .share a:first-child{
+    color: rgb(81, 81, 188);
+}
+
+.rodape .share a:last-child{
+    color: rgb(195, 0, 0);
+    font-size: 1.2rem;
+}
+
+.rodape .share a:hover{
+    background-color: whitesmoke;
+}
+
+
+.rodape .links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: .5rem 0;
+    flex-wrap: wrap;
+}
+
+.rodape .links a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--azul-principal);
+    transition: all .2s;
+}
+
+.rodape .links a:hover{
+    background-color: #9c0d0d;
+}
+
+.rodape .credits {
+    font-size: 1.2em;
+    color: #fff;
+    padding: .5em;
+    font-weight:lighter;
+}
+
+.rodape .credits h3 {
+    color: #333;
+    padding: .5em;
+}
+
+.rodape .credits h3:hover {
+    color: #999;
+}
+
+.rodape .credits h3:hover span {
+    color: #9e4242;
+}
+
+.rodape .credits h2 {
+    font-size: 1rem;
+    color: #fff;
+    padding: .3em 0 1rem 0;
+    font-weight: 600;
+    letter-spacing: .15rem;
+}
