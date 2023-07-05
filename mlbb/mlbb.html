@@ -18,6 +18,7 @@
     <script defer src="js/extensoes.js"></script>
     <script defer src="js/label-slide.js"></script>
     <script defer src="js/scroll.js"></script>
+    <script defer src="js/teste.js"></script>
     <script defer src="https://kit.fontawesome.com/bd92ca8629.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -214,6 +215,7 @@
             
             <div class="bg-secundario">
                 <section class="regras">
+                    <h2 class="titulo-principal">Regras</h2>
                     <div class="container-row-regras">
                         <img src="img/zilong-gif.gif" alt="" class="img-regra valir active" data-regra="objetivos">
                         <img src="img/badang-gif.gif" alt="" class="img-regra kagura" data-regra="proibicoes">
@@ -272,6 +274,10 @@
                         <div class="extensao">
                             <div class="btn-extensao" data-extensao="1">
                                 <h2>Calculadora de WR</h2>
+                                <div class="icon-plus-minus">
+                                    <i class="fa-solid fa-minus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
                             </div>
                             <div class="overflow">
                                 <div class="content"  data-extensao="1">
@@ -287,7 +293,11 @@
                         </div>
                         <div class="extensao">
                             <div class="btn-extensao" data-extensao="2">
-                                <h2>titulo</h2>
+                                <h2>Lorem Ipsum</h2>
+                                <div class="icon-plus-minus">
+                                    <i class="fa-solid fa-minus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
                             </div>
                             <div class="overflow">
                                 <div class="content" data-extensao="2">
@@ -303,7 +313,11 @@
                         </div>
                         <div class="extensao">
                             <div class="btn-extensao" data-extensao="3">
-                                <h2>titulo</h2>
+                                <h2>Lorem Ipsum</h2>
+                                <div class="icon-plus-minus">
+                                    <i class="fa-solid fa-minus"></i>
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
                             </div>
                             <div class="overflow">
                                 <div class="content" data-extensao="3">
@@ -323,14 +337,17 @@
             
 
             <section class="swipper">
-
                 <div class="slides">
+
+                    <div class="arrow-slide-container">
+                        <span class="material-symbols-outlined arrow-slide" id="arrow-back">arrow_back_ios</span>
+                        <span class="material-symbols-outlined arrow-slide" id="arrow-next">arrow_forward_ios</span>
+                    </div>
+
                     <input type="radio" name="radio-btn" id="radio1" data-input="1" checked>
                     <input type="radio" name="radio-btn" id="radio2" data-input="2">
                     <input type="radio" name="radio-btn" id="radio3" data-input="3">
                     <input type="radio" name="radio-btn" id="radio4" data-input="4">
-
-                    
 
                     <!-- slides -->
                     <div class="slide first" data-btn="1">
@@ -854,5 +871,25 @@
                 </div>
             </section>
         </main>
+        <footer class="rodape">
+            <div class="share">
+                <a class="fa-brands fa-discord"></a>
+                <a class="fa-solid fa-house"></a>
+                <a class="fa-brands fa-youtube"></a>
+            </div>
+    
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Menu</a>
+                <a href="#">Contact</a>
+                <a href="#">blogs</a>
+            </div>
+            
+            <div class="credits">
+                <h3>Created by <span>João Miguel A. Lopes</span> | all rights reserved</h3>
+                <h2>Grupo JokenpoG</h2>
+            </div>
+        </footer>
 </body>
 </html>
