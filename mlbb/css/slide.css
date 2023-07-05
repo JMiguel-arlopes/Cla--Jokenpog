@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+
 .swipper {
     padding: 0;
     overflow-x: hidden;
@@ -75,6 +77,30 @@
 
 .swipper .slides input {
     display: none;
+}
+
+.arrow-slide-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 82vw;
+    z-index: 10;
+    top: 1.5rem;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
+.arrow-slide-container .arrow-slide {
+    font-size: 2rem;
+    position: relative;
+    
+    margin: 0;
+    color: rgb(45, 0, 0);
+    text-shadow:
+        0px 2px 0px red,
+        0 0 5px red,
+        0 0 10px darkred;
 }
 
 .swipper .slides .title-perfil {
