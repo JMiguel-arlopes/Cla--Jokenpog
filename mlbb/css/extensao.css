@@ -6,7 +6,11 @@
     align-items: center;
     position: relative;
     z-index: 10;
-    background: linear-gradient(transparent 60%, black);
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    background: 
+        linear-gradient(transparent 60%, black),
+        linear-gradient(rgba(70, 0, 70, 0.2), rgba(70, 0, 70, 0.2));
 }
 
 
@@ -31,42 +35,47 @@
 
 .btn-extensao {  
     background-color: rgb(0, 50, 255);
-    text-align: center;
-    padding: .5rem 0;
-    width: 93vw;
+    text-align: left;
+    padding: .5rem 1rem;
+    width: 100%;
     border-radius: 10px;
-    transition: 1s;
     
     z-index: 10;
     position: relative;
-}
 
-.btn-extensao::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 1.5rem;
-    background: url(../img/down-arrow.png);
-    background-size: cover;
-    width: 1.5rem;
-    height: .8rem;
-    transition: 1s;
-    z-index: 15;
-    animation: down 1.2s linear infinite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 
 .btn-extensao.active {  
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    transition: 1s;
 }
 
-
-.btn-extensao.active::before {
-    animation: up 1.2s linear infinite;
+.icon-plus-minus {
+    position: relative;
 }
+
+.fa-minus:first-child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(90deg) translate3d(-60%, 40%, 0);
+    transform-origin: 50%;
+    -webkit-transform-origin: 50%;
+    -o-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transition: 1.5s;
+} 
+
+.btn-extensao.active .fa-minus:first-child{
+    transform-origin: 50%;
+    -webkit-transform-origin: 50%;
+    -o-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transform: rotate(0deg) translate3d(-50%, -50%, 0);
+} 
 
 @keyframes down {
     0%, 100%{transform: translateY(-60%)}
@@ -90,14 +99,22 @@
     overflow: hidden;
 }
 
+.box-extensoes {
+    width: 100%;
+}
+
+.box-extensoes .extensao{
+    width: 100%;
+}
+
 .box-extensoes .extensao .content {
     display: none;
     padding: 1rem;
     text-align: center;
-    background-color: #111;
+    background-color: rgb(0, 50, 255);
+    border-top: 2px solid white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    
 }
 
 .box-extensoes .extensao .content.active{

@@ -6,15 +6,18 @@
 @import url(slide.css);
 @import url(modal.css);
 @import url(about.css);
-@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
-
+@import url(rodape.css);
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+@import url(https://fonts.googleapis.com/css2?family=Shojumaru&display=swap);
 
 :root {
+    --fonte-secudaria: 'Shojumaru', cursive;
     --gradiente: linear-gradient(to right, rgb(0, 0, 82), rgb(0, 0, 160));
     --gradiente-secundario: linear-gradient(to right, rgb(198, 0, 198), #cda137);
     --gradiente-terciario: linear-gradient(to right top,rgb(0, 0, 160) 5%, rgb(198, 0, 198));
     --efeito: radial-gradient(ellipse farthest-side, rgba(0, 111, 255, 0.15), transparent);
     --azul-principal: rgb(0, 50, 255);
+    --border: .2rem solid rgb(0, 50, 255);
 }
 
 * {
@@ -69,24 +72,28 @@ body{
 }
 
 .titulo-principal {
-    font-size: 2.4em;
-    font-weight: 700;
-    display: block;
-    color: gold;
+    font-family: var(--fonte-secudaria);
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: rgb(255, 231, 96);
+    text-shadow:
+        -3px 3px black,
+        0 0 5px red,
+        0 0 7px red,
+        0 0 10px red,
+        0 0 18px red,
+        0 0 21px red,
+        0 0 42px red,
+        0px 0px 40px blue,
+        0px 0px 50px blue;
     margin-bottom: 1em;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-transform: uppercase;
 }
 
-.titulo-secundari {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--azul-principal);
-    margin-bottom: 1rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
+
+
+
 
 .material-symbols-outlined {
     font-variation-settings:
